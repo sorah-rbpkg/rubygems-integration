@@ -1,3 +1,30 @@
+ruby-defaults (4.5) unstable; urgency=low
+
+  * Merge irb and rdoc into ruby.
+  * Merge lib{dbm,gdbm,readline,openssl}-ruby into libruby.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Mon, 03 May 2010 22:11:28 +0200
+
+ruby-defaults (4.4) unstable; urgency=low
+
+  * Change section to ruby. Agree with ftpmaster.
+  * Drop transitional dummy packages,  not needed in squeeze:
+    libtk-ruby libcurses-ruby libzlib-ruby libyaml-ruby libwebrick-ruby
+    libxmlrpc-ruby librexml-ruby libtest-unit-ruby liberb-ruby libdrb-ruby
+    libracc-runtime-ruby libiconv-ruby libstrscan-ruby libsyslog-ruby
+    libbigdecimal-ruby libpty-ruby libdl-ruby libsdbm-ruby
+  * Standards-Version -> 3.8.4. No changes needed.
+  * Add ${misc:Depends} everywhere to make lintian happy.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Thu, 18 Mar 2010 11:13:10 +0100
+
+ruby-defaults (4.3) unstable; urgency=low
+
+  * In the 'ruby' meta-package, suggest to install the main other packages
+    that are of interest to ruby users.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Thu, 18 Mar 2010 08:33:09 +0100
+
 ruby-defaults (4.2) unstable; urgency=low
 
   * debian/control: Added Homepage and Vcs-* fields.
