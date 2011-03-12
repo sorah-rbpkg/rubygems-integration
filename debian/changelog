@@ -1,3 +1,9 @@
+ruby-defaults (4.7) UNRELEASED; urgency=low
+
+  * Switch to git. Update Vcs-* fields.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Sat, 12 Mar 2011 10:39:53 +0100
+
 ruby-defaults (4.6) experimental; urgency=low
 
   * Remove the Ruby policy from the package. It is no longer applied to ruby

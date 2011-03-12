@@ -6,8 +6,8 @@ Uploaders: akira yamada <akira@debian.org>, Akira TAGOH <tagoh@debian.org>, Luca
 Build-Depends: debhelper (>= 5), cdbs
 Standards-Version: 3.8.4
 Homepage: http://www.ruby-lang.org/
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-ruby/ruby-defaults/trunk/
-Vcs-Svn: svn://svn.debian.org/pkg-ruby/ruby-defaults/trunk/
+Vcs-Git: git://git.debian.org/collab-maint/ruby-defaults.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/ruby-defaults.git;a=summary
 
 Package: ruby
 Architecture: all
