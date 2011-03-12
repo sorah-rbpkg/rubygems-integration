@@ -1,0 +1,437 @@
+<!doctype debiandoc system>
+<!-- $Id: ruby-policy.sgml,v 1.11 2005-12-28 10:17:11 ukai Exp $ -->
+<debiandoc>
+ <book>
+  <titlepag>
+    <title>Debian Ruby Policy</title>
+    <author>
+	<name>Akira Yamada</name>
+    </author>
+    <author>
+	<name>Akira Tagoh</name>
+    </author>
+    <author>
+	<name>Fumitoshi UKAI</name>
+    </author>
+    <version>version 0.0.1.4</version>
+
+    <abstract>
+      This document describes the packaging of Ruby within the Debian
+      distribution and the policy requirements for packaged Ruby programs
+      and modules.
+    </abstract>
+
+    <copyright>
+      <copyrightsummary>
+        Copyright &copy; 2003 Software in the Public Interest
+      </copyrightsummary>
+      <p>
+	  This manual is free software; you can redistribute it and/or
+	  modify it under the terms of the GNU General Public License
+	  as published by the Free Software Foundation; either version
+	  2 of the License, or (at your option) any later version.
+	</p>
+	<p>
+	  This is distributed in the hope that it will be useful, but
+	  WITHOUT ANY WARRANTY; without even the implied warranty of
+	  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See
+	  the GNU General Public License for more details.
+	</p>
+	<p>
+	  A copy of the GNU General Public License is available as
+	  <tt>/usr/share/common-licenses/GPL</tt> in the Debian GNU/Linux
+	  distribution or on the World Wide Web at 
+	  <url id="http://www.gnu.org/copyleft/gpl.html"
+	  name="The GNU Public Licence">.
+	</p>
+	<p>
+	  You can also obtain it by writing to the
+	  Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+	  Boston, MA 02111-1307, USA.
+	</p>
+      </copyright>
+    </titlepag>
+
+    <toc detail="sect">
+
+    <chapt id="ruby">
+      <heading>Ruby Packaging</heading>
+      <sect id="versions">
+	<heading>Versions</heading>
+	<p>
+	  At any given time, the package <package>ruby</package> will
+	  represent the current default Debian Ruby version.
+	</p>
+	<p>
+	  The default Debian Ruby version should alway be the latest stable
+	  upstream release that can be integrated in the distribution.
+	</p>
+	<p>
+	  Apart from the default version, legacy versions of Ruby
+	  may be included as well in the distribution, as long as they
+	  are needed by other packages, or as long as it seems
+	  reasonable to provide them.  (Note: For the scope of this
+	  document, Ruby versions are synonymous to feature
+	  releases, i.e. Ruby 1.6 and 1.6.8 are subminor versions of
+	  the same Ruby version 1.6, but Ruby 1.8 and 1.9 are
+	  indeed different versions.)
+	</p>
+        <p>In addition, unstable/development version of Ruby
+          may be included in the unstable distribution.
+        </p>
+	<p>
+	  For any version, the main package must be called
+	  <package>ruby<var>X</var>.<var>Y</var></package>. 
+	  Names of related packages must include the
+	  <package>ruby<var>X</var>.<var>Y</var></package> part.
+	</p>
+
+      </sect>
+
+      <sect id="base">
+	<heading>Main package</heading>
+	<p>
+	  For every Ruby version provided in the distribution, the
+	  package <package>libruby<var>X</var>.<var>Y</var></package>
+	  shall comprise a complete distribution for
+	  <em>deployment</em> of Ruby modules and the package
+	 <package>ruby<var>X</var>.<var>Y</var></package> shall
+	  comprise a complete distribution for deployment of Ruby scripts.
+	  Note that some ruby applications don't require 
+	  <package>ruby</package>, instead these require 
+	  <package>mod_ruby</package> or <package>eruby</package>.
+	  The <package>libruby<var>X</var>.<var>Y</var></package> includes
+	  core modules of the upstream Ruby distribution and
+	  the <package>ruby<var>X</var>.<var>Y</var></package> package 
+	  includes the binary 
+	  <file>/usr/bin/ruby<var>X</var>.<var>Y</var></file>.
+	</p>
+	<p>
+	  Some tools and files for the
+	  <em>development</em> of Ruby modules are split off in a
+	  separate package <package>ruby<var>X</var>.<var>Y</var>-dev</package>.
+	  Some modules in upstream Ruby distribution will be provided in
+	  separate packages.  
+	  Documentation will be provided separately as well.
+	</p>
+
+	<p>
+	  At any time, exactly one package, called <package>ruby</package>
+	  must contain a binary <file>/usr/bin/ruby</file>, which is
+	  symlink to the <file>/usr/bin/ruby<var>X</var>.<var>Y</var></file>,
+	  the default version of Ruby.
+	</p>
+      </sect>
+
+      <sect id="interpreter">
+        <heading>Ruby Interpreter</heading>
+        <sect1 id="interpreter_name">
+          <heading>Interpreter Name</heading>
+          <p>
+	    Ruby scripts depending on the default Ruby version (see <ref
+	    id="base">) or not depending on a specific Ruby version should
+	    use <file>ruby</file> (unversioned) as the interpreter
+	    name.
+	    </p>
+          <p>
+	    Ruby scripts that only work with a specific Ruby version must
+	    explicitly use the versioned interpreter name
+	    (<file>ruby<var>X</var>.<var>Y</var></file>).
+          </p>
+        </sect1>
+        <sect1 id="interpreter_loc">
+          <heading>Interpreter Location</heading>
+          <p>
+	    The path name for the Ruby interpreter is
+            <file>/usr/bin/ruby</file> or
+            <file>/usr/bin/ruby<var>X</var>.<var>Y</var></file>.
+          </p>
+          <p>
+	    If a maintainer would like to provide the user with the
+	    possibility to override the Debian Ruby interpreter, he
+	    may want to use <file>/usr/bin/env ruby</file> or
+	    <file>/usr/bin/env rubyX.Y</file>.
+	    However this is not advisable as it bypasses Debian's dependency 
+	    checking and makes the package vulnerable to incomplete local 
+	    installations of ruby.
+	  </p>
+        </sect1>
+      </sect>
+
+      <sect id="libruby">
+        <heading>Ruby library</heading>
+        <p>
+         The Ruby library is provided by 
+	 <package>libruby<var>X</var>.<var>Y</var></package>.
+	 The package installs 
+	<file>/usr/lib/libruby<var>X</var>.<var>Y</var>.so.<var>X</var>.<var>Y</var>.<var>Z</var></file> 
+         (soname is <tt>libruby<var>X</var>.<var>Y</var>.so.<var>X</var>.<var>Y</var></tt>)
+         and
+         <file>/usr/lib/libruby<var>X</var>.<var>Y</var>.so.<var>X</var>.<var>Y</var></file>.
+       </p>
+       <p>
+         Note that ruby version 1.6 used <tt>libruby.so.1.6</tt>.
+       </p>
+      </sect>
+
+      <sect id="ruby-dev">
+        <heading>Tools/files for Development of ruby modules</heading>
+        <p>
+          Some tools and files for development of ruby modules are
+	  packaged as <package>ruby<var>X</var>.<var>Y</var>-dev</package>.
+	  This package provides 
+	  <file>/usr/lib/ruby/<var>X</var>.<var>Y</var>/mkmf.rb</file>,
+          <file>/usr/lib/libruby<var>X</var>.<var>Y</var>.so</file>
+	  and header files, static library in 
+	  <tt>Config::CONFIG['archdir']</tt>.
+        </p>
+	<p>
+          Note that ruby 1.6 (ruby1.6-dev) provides 
+	  <file>/usr/lib/libruby.so</file>.
+        </p>
+        <p>
+          TODO: we should install header files in 
+	   <file>/usr/include/ruby<var>X</var>.<var>Y</var>/</file> ?
+        </p>
+      </sect>
+
+      <sect id="paths">
+	<heading>Module Path</heading>
+	<p>
+	  The module search path (<tt>$LOAD_PATH</tt> or <tt>$:</tt>) 
+	  is searched in the following order:
+	  <example>
+ /usr/local/lib/site_ruby/<var>X</var>.<var>Y</var>	 (Config::CONFIG['sitelibdir'])
+ /usr/local/lib/site_ruby/<var>X</var>.<var>Y</var>/<var>GNU-SYSTEM</var> (Config::CONFIG['sitearchdir'])
+ /usr/local/lib/site_ruby		 (Config::CONFIG['sitedir'])
+ /usr/lib/ruby/<var>X</var>.<var>Y</var>	(Config::CONFIG['rubylibdir'])
+ /usr/lib/ruby/<var>X</var>.<var>Y</var>/<var>GNU-SYSTEM</var>	(Config::CONFIG['archdir'])
+ .
+	  </example>
+	</p>
+
+	<p>
+	  TODO: What about
+	  <file>/usr/share/ruby/<var>X</var>.<var>Y</var></file> ?
+	</p>
+
+	<p>
+          System administrator can install ruby modules to
+          <file>/usr/local/lib/site_ruby/<var>X</var>.<var>Y</var>/</file>
+          (for arch independent modules),
+          <file>/usr/local/lib/site_ruby/<var>X</var>.<var>Y</var>/<var>GNU-SYSTEM</var>/</file>
+	  (for arch dependent modules) or
+          <file>/usr/local/lib/site_ruby/</file>
+          (for version independent modules).
+           Note that ruby module packages MUST not use these directories.
+        </p>
+
+      </sect>
+
+      <sect id="docs">
+	<heading>Documentation</heading>
+	<p>
+	  TODO: We should make some policy to use <package>refe</package>.
+	</p>
+      </sect>
+    </chapt>
+
+    <chapt id="module_packages">
+      <heading>Packaged Modules</heading>
+
+      <sect id="package_names">
+	<heading>Module Package Names</heading>
+	<p>
+	  Ruby module packages should be named for the primary module
+	  provided.  The naming convention for a module <tt>foo</tt> is
+	  <package>lib<var>foo</var>-ruby<var>X</var>.<var>Y</var></package>
+         for the package for the Ruby version <var>X</var>.<var>Y</var>.
+	</p>
+	<p>
+	  Package that includes <var>foo</var> modules in 
+	 <file>/usr/lib/ruby/<var>X</var>.<var>Y</var>/</file> must be
+	 named as 
+	 <package>lib<var>foo</var>-ruby<var>X</var>.<var>Y</var></package>.
+	</p>
+	<p>
+	 Since we don't have version independent module path 
+	 (<ref id="paths">), you must package ruby modules for each ruby 
+	 version even if the module is really version independent.  
+	 So, your choice is
+	 (1) package only for default version of ruby, or (2) package
+	  for each available versions of ruby.
+	 XXX: We don't recommend that 
+	 <package>lib<var>foo</var>-ruby</package>
+	 contains files for all available versions of ruby.
+	</p>
+        <p>
+         The package name <package>lib<var>foo</var>-ruby</package>
+	 should be used for a dummy package that depends on
+	 <package>lib<var>foo</var>-ruby<var>X</var>.<var>Y</var></package>
+	 that is packaged for default version of 
+	 ruby <var>X</var>.<var>Y</var>.  By using such a dummy package,
+	 user can easily follow upgrading.
+	</p>
+      </sect>
+
+      <sect id="dependencies">
+	<heading>Dependencies</heading>
+	<p>
+	  Packaged modules available for one particular version of Ruby must
+	  depend on the corresponding
+	  <package>libruby<var>X</var>.<var>Y</var></package> package.
+	  Note that you should use 
+	  <package>libruby<var>X</var>.<var>Y</var></package>, not
+	  <package>ruby<var>X</var>.<var>Y</var></package>, 
+	   because these modules are available
+	  <package>mod_ruby</package> or <package>eruby</package> without
+	  <file>/usr/bin/ruby</file>.  
+	  Of course, if the package includes
+          ruby scripts using <tt>#!/usr/bin/ruby</tt>. it must depend
+          on <package>ruby</package>.
+	  (FIXME: such scripts should be packaged separately?)
+	</p>
+      </sect>
+
+    <chapt id="programs">
+      <heading>Ruby Programs</heading>
+
+      <sect id="version_indep_progs">
+	<heading>Version Independent Programs</heading>
+	<p>
+	  Programs that can run with any version of Ruby should be started
+	  with <tt>#!/usr/bin/ruby</tt>.  They must also specify a
+	  dependency on <package>ruby</package>.  They may specify a 
+	  dependency with versioned like 
+	  <tt>ruby (&gt;= <var>X</var>.<var>Y</var>), 
+	  ruby (&lt;&lt; <var>X</var>.<var>Y'</var>)</tt>,
+	  where <var>Y'</var> &gt;= <var>Y</var> + 3.  
+	  If <var>Y'</var> &lt; <var>Y</var> + 3, then
+	  you should reconsider that the program is really version 
+	  independent.
+        </p>
+        <p>
+	  You're free to use <tt>#!/usr/bin/env ruby</tt>, if you'd like to
+	  give the user a chance to override the Debian Ruby package with a
+	  local version.
+	</p>
+      </sect>
+
+      <sect id="version_dep_progs">
+	<heading>Version Dependent Programs</heading>
+	<p>
+	  Programs which require a specific version of Ruby must start with
+	  <tt>#!/usr/bin/ruby<var>X</var>.<var>Y</var></tt>.  They must also
+	  specify a dependency on
+	  <package>ruby<var>X</var>.<var>Y</var></package>.
+	  Usually, you may package only for default version of ruby,
+	  since program path name should not contains ruby version.
+	  (FIXME: of course, you can alternatives or divert, but we don't 
+	   recommend to do that.)
+        </p>
+        <p>
+	  Again, if you're using <tt>#!/usr/bin/env
+	  ruby<var>X</var>.<var>Y</var></tt>, please be aware that a user
+	  might override the Debian Ruby package with a local version.
+	</p>
+      </sect>
+
+    </chapt>
+
+    <appendix id="build_dependencies">
+      <heading>Build Dependencies</heading>
+      <p>
+	Build dependencies for Ruby dependent packages must be
+	declared for every Ruby version, that the package is built
+	for. To build for a specific version, add the versioned
+	dependencies, to build for the default version, add the
+	unversioned dependency.
+
+	Architecture dependent packages must depend on the
+	<package>ruby<var>X</var>.<var>Y</var>-dev</package> package; 
+	for architecture independent
+	packages, it may be sufficient to depend on the
+	<package>ruby</package> or
+	<package>ruby<var>X</var>.<var>Y</var></package> package.
+      </p>
+    </appendix>
+
+    <appendix id="ruby1.8_bundled_modules">
+      <heading>Ruby 1.8 bundled modules</heading>
+      <p>
+       From Ruby 1.8, many external modules that are distributed
+       as separate packages, are bundled in upstream ruby modules.
+       These packages are libwebrick-ruby, libzlib-ruby, libopenssl-ruby,
+       libstrscan-ruby, drb, libiconv-ruby, xmlrpc4r,
+       libtest-unit-ruby, libyaml-ruby, librexml-ruby and
+       forthcoming soap4r and so on.
+      </p>
+      <p>
+	Currently, these are packaged from <package>ruby1.8</package>
+	source package. FIXME: how do we handle this issue?
+      </p>
+    </appendix>
+
+    <appendix id="transition_1.6_to_1.8">
+      <heading>Ruby 1.6 to 1.8 transition</heading>
+      <p>
+       Currently, ruby 1.6 is packaged as <package>ruby</package>, so
+       this does not follow this ruby policy. So, we'll do as follows.
+      </p>
+
+      <p>
+       Initially, we, ruby maintenance team, will intent to package 
+	<package>ruby1.6</package>.
+       We'll make <package>ruby1.6</package> from ruby_1.6.8 with
+       renaming ruby to ruby1.6.
+      </p>
+      <p>
+       We also make package <package>ruby-defaults</package> providing
+       <package>ruby</package> and <package>libruby</package> packages.
+       <package>Ruby</package> package depends on <package>ruby1.6</package>
+       and includes
+       <file>/usr/bin/ruby</file> symlinked to 
+       <file>/usr/bin/ruby1.6</file> and this ruby policy text.
+       <package>libruby</package> package depends on 
+       <package>libruby1.6</package>.
+      </p>
+      <p>
+	Module packages are packaged as 
+	<package>lib<var>foo</var>-ruby1.6</package> for ruby1.6,
+        and optionally 
+        <package>lib<var>foo</var>-ruby</package> that depends on
+	<package>lib<var>foo</var>-ruby1.6</package>.
+      </p>
+      <p>
+        Note that old version of <package>lib<var>foo</var>-ruby</package>
+        and renamed version of <package>lib<var>foo</var>-ruby1.6</package>
+        provides files with same pathnames, so that you must add
+        conflicts &amp; replaces against older versions. That is, don't
+        forget to add to debian/control:
+        <example>
+          Conflicts: lib<var>foo</var>-ruby (&lt;&lt; <var>renamed-version</var>)
+          Replaces: lib<var>foo</var>-ruby (&lt;&lt; <var>renamed-version</var>)
+        </example>
+      </p>
+      <p>
+	Version-dependent ruby programs should depends on
+	<package>ruby1.6</package> and use <tt>#!/usr/bin/ruby1.6</tt>
+	instead of <tt>#!/usr/bin/ruby</tt>.
+      </p>
+      <p>Version-independent ruby program that depends on 
+	 <tt>ruby (&gt;= 1.6)</tt>
+	 but no upper bound limit such as <tt>ruby (&lt;&lt; 1.8)</tt> or so,
+	 make sure it actually works on ruby1.8. If it works on
+	 ruby1.8, it should depend on 
+	 <tt>ruby (&gt;= 1.6), ruby (&lt;&lt; 1.9)</tt>.
+	 If it doesn't work on ruby1.8, it is version dependent ruby program,
+	 so it must depend on <tt>ruby1.6</tt>.
+      </p>
+      <p>
+	After waiting for a week or so(?), we will change default
+	version of ruby from 1.6 to 1.8.  Ruby modules and programs
+	should be modified to work with default version of ruby 1.8.
+      </p>
+    </appendix>
+  </book>
+</debiandoc>

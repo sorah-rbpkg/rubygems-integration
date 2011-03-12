@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+clean::
+	cd doc && [ ! -f Makefile ] || $(MAKE) clean
+
+build/ruby::
+	(cd doc && $(MAKE) all)
