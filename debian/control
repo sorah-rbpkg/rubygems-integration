@@ -4,7 +4,6 @@ Priority: optional
 Maintainer: Fumitoshi UKAI <ukai@debian.or.jp>
 Uploaders: akira yamada <akira@debian.org>, Akira TAGOH <tagoh@debian.org>, Lucas Nussbaum <lucas@lucas-nussbaum.net>
 Build-Depends: debhelper (>= 5), cdbs
-Build-Depends-Indep: debiandoc-sgml
 Standards-Version: 3.8.4
 Homepage: http://www.ruby-lang.org/
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-ruby/ruby-defaults/trunk/
@@ -12,102 +11,64 @@ Vcs-Svn: svn://svn.debian.org/pkg-ruby/ruby-defaults/trunk/
 
 Package: ruby
 Architecture: all
-Depends: ruby1.8, ${misc:Depends}
+Depends: ruby1.8 (>> 1.8.7.334-1), ${misc:Depends}
 Suggests: ri, ruby-dev
 Conflicts: irb, rdoc
 Replaces: irb, rdoc
 Provides: irb, rdoc
-Description: An interpreter of object-oriented scripting language Ruby
- Ruby is the interpreted scripting language for quick and
- easy object-oriented programming.  It has many features to
- process text files and to do system management tasks (as in
- perl).  It is simple, straight-forward, and extensible.
- .
- This package is a dependency package, which depends on Debian's default
- Ruby version (currently 1.8.x).
+Description: Transitional package for ruby1.8
+ This is a transitional package which ensures that users of ruby will use
+ ruby1.8 in the future. It can safely be removed.
 
 Package: ruby-dev
 Section: devel
 Architecture: all
-Depends: ruby1.8-dev, ${misc:Depends}
-Description: Header files for compiling extension modules for Ruby
- Ruby is the interpreted scripting language for quick and
- easy object-oriented programming.  It has many features to
- process text files and to do system management tasks (as in
- perl).  It is simple, straight-forward, and extensible.
- .
- This package provides the header files, necessary to make extension
- library for Ruby.
- .
- This package is a dependency package, which depends on Debian's default
- Ruby version (currently 1.8.x).
+Depends: ruby1.8-dev (>> 1.8.7.334-1), ${misc:Depends}
+Description: Transitional package for ruby1.8-dev
+ This is a transitional package which ensures that users of ruby-dev will use
+ ruby1.8-dev in the future. It can safely be removed.
 
 Package: libruby
 Section: libs
 Architecture: all
-Depends: libruby1.8, ${misc:Depends}
+Depends: libruby1.8 (>> 1.8.7.334-1), ${misc:Depends}
 Conflicts: libsdbm-ruby (<< 4), libdl-ruby (<< 4), libpty-ruby (<< 4), libbigdecimal-ruby (<< 4), libsyslog-ruby (<< 4), libstrscan-ruby (<< 4), libiconv-ruby (<< 4), libracc-runtime-ruby (<< 4), libdrb-ruby (<< 4), liberb-ruby (<< 4), libtest-unit-ruby (<< 4), librexml-ruby (<< 4), libxmlrpc-ruby (<< 4), libwebrick-ruby (<< 4), libyaml-ruby (<< 4), libzlib-ruby (<< 4), libcurses-ruby (<< 4), libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
 Replaces: libsdbm-ruby (<< 4), libdl-ruby (<< 4), libpty-ruby (<< 4), libbigdecimal-ruby (<< 4), libsyslog-ruby (<< 4), libstrscan-ruby (<< 4), libiconv-ruby (<< 4), libracc-runtime-ruby (<< 4), libdrb-ruby (<< 4), liberb-ruby (<< 4), libtest-unit-ruby (<< 4), librexml-ruby (<< 4), libxmlrpc-ruby (<< 4), libwebrick-ruby (<< 4), libyaml-ruby (<< 4), libzlib-ruby (<< 4), libcurses-ruby (<< 4), libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
 Provides: libsdbm-ruby, libdl-ruby, libpty-ruby, libbigdecimal-ruby, libsyslog-ruby, libstrscan-ruby, libiconv-ruby, libracc-runtime-ruby, libdrb-ruby, liberb-ruby, libtest-unit-ruby, librexml-ruby, libxmlrpc-ruby, libwebrick-ruby, libyaml-ruby, libzlib-ruby, libcurses-ruby, libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
-Description: Libraries necessary to run Ruby 1.8.x
- Ruby is the interpreted scripting language for quick and easy
- object-oriented programming.  It has many features to process text
- files and to do system management tasks (as in perl).  It is simple,
- straight-forward, and extensible.
- .
- This package provides the ruby standard library (stdlib), which is necessary
- to run Ruby scripts.
- .
- This package is a dependency package, which depends on Debian's default
- Ruby version (currently 1.8.x).
+Description: Transitional package for libruby1.8
+ This is a transitional package which ensures that users of libruby will use
+ libruby1.8 in the future. It can safely be removed.
 
 Package: libtcltk-ruby
 Architecture: all
-Depends: libtcltk-ruby1.8, ${misc:Depends}
+Depends: libtcltk-ruby1.8 (>> 1.8.7.334-1), ${misc:Depends}
 Conflicts: libtk-ruby (<< 4)
 Replaces: libtk-ruby (<< 4)
 Provides: libtk-ruby
-Description: Tcl/Tk interface for Ruby
- This package provides an extension library "tcltk" for Ruby. It provides a
- low-level interface to Tcl/Tk.
- .
- This package is a dependency package, which depends on Debian's default
- Ruby version (currently 1.8.x).
+Description: Transitional package for libtcltk-ruby1.8
+ This is a transitional package which ensures that users of libtcltk-ruby will
+ use libtcltk-ruby1.8 in the future. It can safely be removed.
 
 Package: ruby-elisp
 Architecture: all
-Depends: ruby1.8-elisp, ${misc:Depends}
+Depends: ruby1.8-elisp (>> 1.8.7.334-1), ${misc:Depends}
 Conflicts: ruby1.6-elisp
 Replaces: ruby1.6-elisp
-Description: Emacs-lisp ruby-mode for Ruby
- This package provides major-mode for editing Ruby scripts and some
- emacs-lisp programs for Ruby programmers.
- .
- This package is a dependency package, which depends on Debian's default
- Ruby version (currently 1.8.x).
+Description: Transitional package for ruby-elisp1.8
+ This is a transitional package which ensures that users of ruby-elisp will use
+ ruby-elisp1.8 in the future. It can safely be removed.
 
 Package: ri
 Architecture: all
-Depends: ri1.8, ${misc:Depends}
-Description: Ruby Interactive reference (ri)
- ri is a command line tool that displays descriptions of built-in Ruby
- methods, classes, and modules. For methods, it shows you the calling
- sequence and a description. For classes and modules, it shows a synopsis
- along with a list of the methods the class or module implements.
- .
- This package is a dependency package, which depends on Debian's default
- Ruby version (currently 1.8.x).
+Depends: ri1.8 (>> 1.8.7.334-1), ${misc:Depends}
+Description: Transitional package for ri1.8
+ This is a transitional package which ensures that users of ri will use
+ ri1.8 in the future. It can safely be removed.
  
 Package: ruby-full
 Architecture: all
-Depends: ruby, ri, ruby1.8-dev, ${misc:Depends}
-Recommends: libtcltk-ruby, ruby-elisp
-Description: Ruby full installation
- For many good reasons, the Ruby programming language is split in many
- small different packages. Installing this package will make sure you have
- all the packages that add up to a full Ruby installation, with the exception
- of the Tcl/Tk bindings for Ruby, which are only recommended.
- .
- This package installs the dependencies for the current stable
- version of Ruby, which is 1.8.
+Depends: ruby1.8-full (>> 1.8.7.334-1), ${misc:Depends}
+Description: Transitional package for ruby1.8-full
+ This is a transitional package which ensures that users of ruby-full will use
+ ruby1.8-full in the future. It can safely be removed.
 

@@ -1,3 +1,14 @@
+ruby-defaults (4.6) experimental; urgency=low
+
+  * Remove the Ruby policy from the package. It is no longer applied to ruby
+    packages anyway.
+  * Make all binary packages transitional packages for their ruby1.8
+    counterparts. This source package can be dropped after the wheezy release.
+  * Upload to experimental. Changes are very intrusive and need
+    extensive testing.
+
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Sat, 05 Mar 2011 21:09:30 +0100
+
 ruby-defaults (4.5) unstable; urgency=low
 
   * Merge irb and rdoc into ruby.
