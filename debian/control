@@ -1,8 +1,8 @@
 Source: ruby-defaults
 Section: ruby
 Priority: optional
-Maintainer: Fumitoshi UKAI <ukai@debian.or.jp>
-Uploaders: akira yamada <akira@debian.org>, Akira TAGOH <tagoh@debian.org>, Lucas Nussbaum <lucas@lucas-nussbaum.net>
+Maintainer: akira yamada <akira@debian.org>
+Uploaders: Daigo Moriwaki <daigo@debian.org>, Lucas Nussbaum <lucas@lucas-nussbaum.net>
 Build-Depends: debhelper (>= 5), cdbs
 Standards-Version: 3.8.4
 Homepage: http://www.ruby-lang.org/

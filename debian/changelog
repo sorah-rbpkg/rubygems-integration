@@ -2,8 +2,9 @@ ruby-defaults (4.7) unstable; urgency=low
 
   * Switch to git. Update Vcs-* fields.
   * Upload to unstable.
+  * Sync Maintainers and Uploaders with those from ruby1.8 and ruby1.9.1
 
- -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Fri, 25 Mar 2011 10:13:00 +0100
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Fri, 25 Mar 2011 10:26:07 +0100
 
 ruby-defaults (4.6) experimental; urgency=low
 
