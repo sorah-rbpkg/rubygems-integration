@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: akira yamada <akira@debian.org>
 Uploaders: Daigo Moriwaki <daigo@debian.org>, Lucas Nussbaum <lucas@lucas-nussbaum.net>
 Build-Depends: debhelper (>= 5), cdbs
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 Homepage: http://www.ruby-lang.org/
 Vcs-Git: git://git.debian.org/collab-maint/ruby-defaults.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/ruby-defaults.git;a=summary
