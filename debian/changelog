@@ -1,8 +1,9 @@
-ruby-defaults (4.7) UNRELEASED; urgency=low
+ruby-defaults (4.7) unstable; urgency=low
 
   * Switch to git. Update Vcs-* fields.
+  * Upload to unstable.
 
- -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Sat, 12 Mar 2011 10:39:53 +0100
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Fri, 25 Mar 2011 10:13:00 +0100
 
 ruby-defaults (4.6) experimental; urgency=low
 
