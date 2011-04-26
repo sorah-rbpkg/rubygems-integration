@@ -1,8 +1,8 @@
-ruby-defaults (4.8) UNRELEASED; urgency=low
+ruby-defaults (4.8) unstable; urgency=high
 
- * 
+  * Drop ruby-elisp, since the corresponding ruby1.8 package was dropped.
 
- -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Fri, 25 Mar 2011 10:36:48 +0100
+ -- Lucas Nussbaum <lucas@lucas-nussbaum.net>  Tue, 26 Apr 2011 22:54:16 +0200
 
 ruby-defaults (4.7) unstable; urgency=low
 

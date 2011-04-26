@@ -49,15 +49,6 @@ Description: Transitional package for libtcltk-ruby1.8
  This is a transitional package which ensures that users of libtcltk-ruby will
  use libtcltk-ruby1.8 in the future. It can safely be removed.
 
-Package: ruby-elisp
-Architecture: all
-Depends: ruby1.8-elisp (>> 1.8.7.334-1), ${misc:Depends}
-Conflicts: ruby1.6-elisp
-Replaces: ruby1.6-elisp
-Description: Transitional package for ruby-elisp1.8
- This is a transitional package which ensures that users of ruby-elisp will use
- ruby-elisp1.8 in the future. It can safely be removed.
-
 Package: ri
 Architecture: all
 Depends: ri1.8 (>> 1.8.7.334-1), ${misc:Depends}
