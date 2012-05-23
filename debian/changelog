@@ -1,3 +1,11 @@
+ruby-defaults (4.9) unstable; urgency=low
+
+  * Switch default ruby version to 1.9.
+  * Drop "transitional package" desciptions to something more similar to 
+    Python default version packages.
+
+ -- Shawn Landden <shawnlandden@gmail.com>  Wed, 23 May 2012 13:19:04 -0700
+
 ruby-defaults (4.8) unstable; urgency=high
 
   * Drop ruby-elisp, since the corresponding ruby1.8 package was dropped.
