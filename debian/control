@@ -11,7 +11,7 @@ Vcs-Browser: http://git.debian.org/?p=collab-maint/ruby-defaults.git;a=summary
 
 Package: ruby
 Architecture: all
-Depends: ruby1.9.1 (>> 1.9.3.0-2.1), ${misc:Depends}
+Depends: ruby1.9.1 (>= 1.9.3.194-1), ${misc:Depends}
 Suggests: ri, ruby-dev
 Conflicts: irb, rdoc
 Replaces: irb, rdoc
@@ -28,7 +28,7 @@ Description: Interpreter of object-oriented scripting language Ruby (default ver
 Package: ruby-dev
 Section: devel
 Architecture: all
-Depends: ruby1.9.1-dev (>> 1.9.3.0-2.1), ${misc:Depends}
+Depends: ruby1.9.1-dev (>= 1.9.3.194-1), ${misc:Depends}
 Description: Header files for compiling extension modules for Ruby (default version)
  Ruby is the interpreted scripting language for quick and easy
  object-oriented programming.  It has many features to process text
@@ -45,7 +45,7 @@ Description: Header files for compiling extension modules for Ruby (default vers
 Package: libruby
 Section: libs
 Architecture: all
-Depends: libruby1.9.1 (>> 1.9.3.0-2.1), ${misc:Depends}
+Depends: libruby1.9.1 (>= 1.9.3.194-1), ${misc:Depends}
 Conflicts: libsdbm-ruby (<< 4), libdl-ruby (<< 4), libpty-ruby (<< 4), libbigdecimal-ruby (<< 4), libsyslog-ruby (<< 4), libstrscan-ruby (<< 4), libiconv-ruby (<< 4), libracc-runtime-ruby (<< 4), libdrb-ruby (<< 4), liberb-ruby (<< 4), libtest-unit-ruby (<< 4), librexml-ruby (<< 4), libxmlrpc-ruby (<< 4), libwebrick-ruby (<< 4), libyaml-ruby (<< 4), libzlib-ruby (<< 4), libcurses-ruby (<< 4), libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
 Replaces: libsdbm-ruby (<< 4), libdl-ruby (<< 4), libpty-ruby (<< 4), libbigdecimal-ruby (<< 4), libsyslog-ruby (<< 4), libstrscan-ruby (<< 4), libiconv-ruby (<< 4), libracc-runtime-ruby (<< 4), libdrb-ruby (<< 4), liberb-ruby (<< 4), libtest-unit-ruby (<< 4), librexml-ruby (<< 4), libxmlrpc-ruby (<< 4), libwebrick-ruby (<< 4), libyaml-ruby (<< 4), libzlib-ruby (<< 4), libcurses-ruby (<< 4), libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
 Provides: libsdbm-ruby, libdl-ruby, libpty-ruby, libbigdecimal-ruby, libsyslog-ruby, libstrscan-ruby, libiconv-ruby, libracc-runtime-ruby, libdrb-ruby, liberb-ruby, libtest-unit-ruby, librexml-ruby, libxmlrpc-ruby, libwebrick-ruby, libyaml-ruby, libzlib-ruby, libcurses-ruby, libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
@@ -62,7 +62,7 @@ Description: Libraries necessary to run Ruby
 
 Package: libtcltk-ruby
 Architecture: all
-Depends: libtcltk-ruby1.9.1 (>> 1.9.3.0-2.1), ${misc:Depends}
+Depends: libtcltk-ruby1.9.1 (>= 1.9.3.194-1), ${misc:Depends}
 Conflicts: libtk-ruby (<< 4)
 Replaces: libtk-ruby (<< 4)
 Provides: libtk-ruby
@@ -75,7 +75,7 @@ Description: Tcl/Tk interface for Ruby
 
 Package: ri
 Architecture: all
-Depends: ri1.9.1 (>> 1.9.3.0-2.1), ${misc:Depends}
+Depends: ri1.9.1 (>= 1.9.3.194-1), ${misc:Depends}
 Description: Ruby Interactive reference
  ri is a command line tool that displays descriptions of built-in Ruby
  methods, classes, and modules. For methods, it shows you the calling
@@ -89,10 +89,10 @@ Description: Ruby Interactive reference
  .
  This package is a dependency package, which depends on Debian's default Ruby
  version (currently v1.9.3).
- 
+
 Package: ruby-full
 Architecture: all
-Depends: ruby1.9.1-full (>> 1.9.3.0-2.1), ${misc:Depends}
+Depends: ruby1.9.1-full (>= 1.9.3.194-1), ${misc:Depends}
 Description: Ruby full installation (default version)
  For many good reasons, the Ruby programming language is split in many
  small different packages. Installing this package will make sure you have
