@@ -7,7 +7,10 @@ ruby-defaults (4.9) unstable; urgency=low
   * Convert copyright file to machine readable specification.
 
   [ Antonio Terceiro ]
-  * debian/control: add myself to Uploaders:
+  * debian/control:
+    + add myself to Uploaders:
+    + bump standards version to 3.9.3. No changes needed.
+  * added debian/source/format
 
  -- Antonio Terceiro <terceiro@debian.org>  Sun, 27 May 2012 21:32:07 -0300
 
