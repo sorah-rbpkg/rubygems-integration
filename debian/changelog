@@ -1,8 +1,8 @@
-ruby-defaults (4.9) UNRELEASED; urgency=low
+ruby-defaults (4.9) unstable; urgency=low
 
   [ Shawn Landden ]
   * Switch default ruby version to 1.9.
-  * Drop "transitional package" desciptions to something more similar to 
+  * Drop "transitional package" desciptions to something more similar to
     Python default version packages.
   * Convert copyright file to machine readable specification.
 
@@ -12,7 +12,7 @@ ruby-defaults (4.9) UNRELEASED; urgency=low
     + bump standards version to 3.9.3. No changes needed.
   * added debian/source/format
 
- -- Antonio Terceiro <terceiro@debian.org>  Sun, 27 May 2012 21:32:07 -0300
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 03 Jun 2012 14:55:39 -0300
 
 ruby-defaults (4.8) unstable; urgency=high
 
