@@ -7,7 +7,7 @@ run-specs:
 	ruby -Ilib $(SPECS)
 
 install:
-	install -m 755 -d /usr/lib/ruby/vendor_ruby/rubygems/defaults
+	install -m 755 -d $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults
 	install -m 644 lib/rubygems/defaults/operating_system.rb $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults
 
 uninstall:
