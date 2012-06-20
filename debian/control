@@ -1,0 +1,19 @@
+Source: rubygems-integration
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Antonio Terceiro <terceiro@debian.org>
+DM-Upload-Allowed: yes
+Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.2.17~)
+Standards-Version: 3.9.3
+#Vcs-Git: git://git.debian.org/pkg-ruby-extras/rubygems-integration.git
+#Vcs-Browser: http://git.debian.org/?p=pkg-ruby-extras/rubygems-integration.git;a=summary
+Homepage: FIXME
+XS-Ruby-Versions: all
+
+Package: rubygems-integration
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter
+Description: FIXME
+ <insert long description, indented with spaces>
