@@ -1,5 +1,5 @@
-rubygems-integration (0.1.0~FIXME-1) UNRELEASED; urgency=low
+rubygems-integration (1.0) UNRELEASED; urgency=low
 
-  * Initial release (Closes: #nnnn)
+  * Initial release.
 
  -- Antonio Terceiro <terceiro@debian.org>  Wed, 20 Jun 2012 19:55:07 -0300

@@ -4,16 +4,19 @@ Priority: optional
 Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Uploaders: Antonio Terceiro <terceiro@debian.org>
 DM-Upload-Allowed: yes
-Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.2.17~)
+Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.9.3
-#Vcs-Git: git://git.debian.org/pkg-ruby-extras/rubygems-integration.git
-#Vcs-Browser: http://git.debian.org/?p=pkg-ruby-extras/rubygems-integration.git;a=summary
-Homepage: FIXME
+Vcs-Git: git://git.debian.org/pkg-ruby-extras/rubygems-integration.git
+Vcs-Browser: http://git.debian.org/?p=pkg-ruby-extras/rubygems-integration.git;a=summary
 XS-Ruby-Versions: all
 
 Package: rubygems-integration
 Architecture: all
 XB-Ruby-Versions: ${ruby:Versions}
 Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter
-Description: FIXME
- <insert long description, indented with spaces>
+Suggests: rubygems, bundler
+Description: integrates Debian Ruby packages with Rubygems
+ rubygems-integration makes Debian Ruby packages recognizable by Rubygems.
+ Debian Ruby packages may be used to satisfy Rubygems dependencies both with
+ plain Rubygems and with Bundler. This also allows to use Debian Ruby packages
+ to satisfy dependencies in Rails 3 applications.
