@@ -1,5 +1,5 @@
-rubygems-integration (1.0) UNRELEASED; urgency=low
+rubygems-integration (1.0) unstable; urgency=low
 
   * Initial release.
 
- -- Antonio Terceiro <terceiro@debian.org>  Wed, 20 Jun 2012 19:55:07 -0300
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 24 Jun 2012 17:25:52 -0300
