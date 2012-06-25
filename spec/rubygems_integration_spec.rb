@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'minitest/autorun'
 require 'rbconfig'
-require 'rubygems/operating_system'
+require 'rubygems/defaults/operating_system'
 
 $RUBY_VERSION = RbConfig::CONFIG['ruby_version']
 
