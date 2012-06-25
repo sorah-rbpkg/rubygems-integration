@@ -1,3 +1,9 @@
+rubygems-integration (1.1) UNRELEASED; urgency=low
+
+  * Add gemspec for rdoc-3.9.4 which is included with ruby1.9.1
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 25 Jun 2012 20:18:03 -0300
+
 rubygems-integration (1.0) unstable; urgency=low
 
   * Initial release.
