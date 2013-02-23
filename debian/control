@@ -14,6 +14,7 @@ Architecture: all
 Depends: ruby1.9.1 (>= 1.9.3.194-1), ${misc:Depends}
 Suggests: ri, ruby-dev
 Conflicts: irb, rdoc
+Breaks: apt-listbugs (<< 0.1.6)
 Replaces: irb, rdoc
 Provides: irb, rdoc
 Description: Interpreter of object-oriented scripting language Ruby (default version)

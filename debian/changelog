@@ -1,3 +1,10 @@
+ruby-defaults (1:1.9.3) unstable; urgency=low
+
+  * declare Breaks: apt-listbugs (<< 0.1.6) in ruby package to avoid breaking
+    squeeze/wheezy upgrades when apt-listbugs is installed (Closes: 700671).
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 23 Feb 2013 10:45:13 -0300
+
 ruby-defaults (4.9) unstable; urgency=low
 
   [ Shawn Landden ]
