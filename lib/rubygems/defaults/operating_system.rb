@@ -1,9 +1,11 @@
 class << Gem
 
+  alias :upstream_default_dir :default_dir
   def default_dir
     File.join('/', 'var', 'lib', 'gems', Gem::ConfigMap[:ruby_version])
   end
 
+  alias :upstream_default_bindir :default_bindir
   def default_bindir
     File.join('/', 'usr', 'local', 'bin')
   end
