@@ -1,10 +1,11 @@
+RUBY = ruby
 SPECS = $(wildcard spec/*_spec.rb)
 
 all:
 	@echo Nothing to build!
 
 run-specs:
-	ruby -Ilib $(SPECS)
+	$(RUBY) -Ilib $(SPECS)
 
 install:
 	install -m 755 -d $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults
