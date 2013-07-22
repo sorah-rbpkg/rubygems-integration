@@ -12,6 +12,7 @@ Package: rubygems-integration
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter
 Suggests: bundler
+Multi-Arch: foreign
 Description: integration of Debian Ruby packages with Rubygems
  rubygems-integration makes Debian Ruby packages recognizable by Rubygems.
  Debian Ruby packages may be used to satisfy Rubygems dependencies both with
