@@ -11,7 +11,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb?p=pkg-ruby-extras/rubygems-integra
 Package: rubygems-integration
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter
-Suggests: rubygems, bundler
+Suggests: bundler
 Description: integrates Debian Ruby packages with Rubygems
  rubygems-integration makes Debian Ruby packages recognizable by Rubygems.
  Debian Ruby packages may be used to satisfy Rubygems dependencies both with
