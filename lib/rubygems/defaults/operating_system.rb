@@ -16,3 +16,14 @@ class << Gem
   end
 
 end
+
+if RUBY_VERSION >= '2.0' then
+  class << Gem::Specification
+
+    alias :upstream_default_specifications_dir :default_specifications_dir
+    def default_specifications_dir
+      File.join(Gem.upstream_default_dir, "specifications", "default")
+    end
+
+  end
+end
