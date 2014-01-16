@@ -1,3 +1,15 @@
+rubygems-integration (1.4) unstable; urgency=medium
+
+  [ Christian Hofstaedtler ]
+  * Support Ruby 2.0+ "default gems" directory
+
+  [ Antonio Terceiro ]
+  * Mark as Multi-Arch: foreign
+  * Workaround problem with install path of ruby2.0
+  * add autopkgtests
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 16 Jan 2014 18:24:54 +0100
+
 rubygems-integration (1.3) unstable; urgency=medium
 
   * Team upload.
