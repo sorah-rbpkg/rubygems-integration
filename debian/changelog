@@ -2,6 +2,10 @@ ruby-defaults (1:2.0.0) unstable; urgency=medium
 
   * `ruby` now Conflicts with ruby1.8, which should be removed from the
     archive soonish.
+  * Take control of /usr/bin/ruby
+    - update-alternatives for /usr/bin/ruby is not supported anymore.
+    - /usr/bin/ruby will now be part of this package and will point to the
+      default Ruby
 
  -- Antonio Terceiro <terceiro@debian.org>  Wed, 15 Jan 2014 17:11:36 +0100
 
