@@ -1,6 +1,5 @@
 ruby-defaults (1:2.0.0) unstable; urgency=medium
 
-  * Use Ruby 2.0 by default
   * `ruby` now Conflicts with ruby1.8, which should be removed from the
     archive soonish.
 
