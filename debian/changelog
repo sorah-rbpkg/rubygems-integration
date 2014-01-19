@@ -1,11 +1,13 @@
-ruby-defaults (1:2.0.0) unstable; urgency=medium
+ruby-defaults (1:1.9.3.1) UNRELEASED; urgency=medium
 
-  * `ruby` now Conflicts with ruby1.8, which should be removed from the
-    archive soonish.
-  * Take control of /usr/bin/ruby
-    - update-alternatives for /usr/bin/ruby is not supported anymore.
-    - /usr/bin/ruby will now be part of this package and will point to the
-      default Ruby
+  * Switch from cdbs to debhelper
+  * `ruby` now Conflicts with ruby1.8 and rubygems packages, which should be
+    removed from the archive soonish.
+  * Take control of /usr/bin/{erb,testrb,irb,rdoc,gem,ri,ruby} binaries
+    - update-alternatives for /usr/bin/ruby and slave symlinks is not
+      supported anymore.
+    - Those binaries will now be part of this package and will point to the
+      binaries provided by the default Ruby
 
  -- Antonio Terceiro <terceiro@debian.org>  Wed, 15 Jan 2014 17:11:36 +0100
 

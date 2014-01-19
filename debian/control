@@ -3,7 +3,7 @@ Section: ruby
 Priority: optional
 Maintainer: akira yamada <akira@debian.org>
 Uploaders: Daigo Moriwaki <daigo@debian.org>, Lucas Nussbaum <lucas@lucas-nussbaum.net>, Antonio Terceiro <terceiro@debian.org>
-Build-Depends: debhelper (>= 5), cdbs
+Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
 Homepage: http://www.ruby-lang.org/
 Vcs-Git: git://git.debian.org/collab-maint/ruby-defaults.git
@@ -13,7 +13,7 @@ Package: ruby
 Architecture: all
 Depends: ruby1.9.1, ${misc:Depends}
 Suggests: ri, ruby-dev
-Conflicts: irb, rdoc, ruby1.8
+Conflicts: irb, rdoc, ruby1.8, rubygems
 Breaks: apt-listbugs (<< 0.1.6),
  ruby1.9.1 (<< 1.9.3.484-2),
  ruby2.0 (<< 2.0.0.484-1),

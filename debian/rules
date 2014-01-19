@@ -1,3 +1,14 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/debhelper.mk
+export DEBIAN_DEFAULT_RUBY_VERSION=1.9.1
+export DEBIAN_RUBY_PROGRAMS = \
+  erb \
+  gem \
+  irb \
+  rdoc \
+  ri \
+  testrb \
+  ruby
+
+%:
+	dh $@

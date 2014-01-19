@@ -1,2 +1,15 @@
-usr/bin/ruby1.9.1                        usr/bin/ruby
-/usr/share/man/man1/ruby1.9.1.1.gz       usr/share/man/man1/ruby.1.gz
+#!/bin/sh
+
+set -e
+
+if [ -z "$DEBIAN_DEFAULT_RUBY_VERSION" ]; then
+  echo "\$DEBIAN_DEFAULT_RUBY_VERSION not defined!"
+  exit 1
+fi
+
+version="${DEBIAN_DEFAULT_RUBY_VERSION}"
+
+for program in $DEBIAN_RUBY_PROGRAMS; do
+  echo "usr/bin/${program}${version}  usr/bin/${program}"
+  echo "usr/share/man/man1/${program}${version}.1.gz  usr/share/man/man1/${program}.1.gz"
+done
