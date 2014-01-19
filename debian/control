@@ -45,6 +45,23 @@ Description: Header files for compiling extension modules for Ruby (default vers
  This package is a dependency package, which depends on Debian's default Ruby
  version (currently v1.9.3).
 
+Package: ruby-all-dev
+Section: devel
+Architecture: all
+Depends: ruby1.9.1-dev (>= 1.9.3.194-1), ruby2.0-dev (>= 2.0.0.484-1), ${misc:Depends}
+Description: Header files for compiling extension modules for Ruby (all versions)
+ Ruby is the interpreted scripting language for quick and easy
+ object-oriented programming.  It has many features to process text
+ files and to do system management tasks (as in perl).  It is simple,
+ straight-forward, and extensible.
+ .
+ This package contains the header files and the mkmf library, necessary
+ to make extension library for Ruby. It is also required to build
+ many gems.
+ .
+ This package is a dependency package, which depends on all versions of Ruby
+ that are supported in Debian.
+
 Package: libruby
 Section: libs
 Architecture: all
