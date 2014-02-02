@@ -1,4 +1,4 @@
-ruby-defaults (1:1.9.3.1) UNRELEASED; urgency=medium
+ruby-defaults (1:1.9.3.1) unstable; urgency=medium
 
   * Switch from cdbs to debhelper
   * `ruby` now Conflicts with ruby1.8 and rubygems packages, which should be
@@ -9,7 +9,7 @@ ruby-defaults (1:1.9.3.1) UNRELEASED; urgency=medium
     - Those binaries will now be part of this package and will point to the
       binaries provided by the default Ruby
 
- -- Antonio Terceiro <terceiro@debian.org>  Wed, 15 Jan 2014 17:11:36 +0100
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 01 Feb 2014 21:55:19 -0300
 
 ruby-defaults (1:1.9.3) unstable; urgency=low
 
