@@ -1,0 +1,9 @@
+ruby-defaults (1:1.9.3.1) unstable; urgency=medium
+
+  The Ruby packages in Debian no longer support switching between different
+  Ruby versions using update-alternatives. All unversioned binary names such
+  as `ruby`, `gem` etc are now provided by the `ruby` package, and will be
+  symbolic links pointing to the binaries corresponding to the current default
+  version in Debian.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 02 Feb 2014 22:03:13 -0300
