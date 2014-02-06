@@ -1,8 +1,12 @@
 Source: ruby-defaults
 Section: ruby
 Priority: optional
-Maintainer: akira yamada <akira@debian.org>
-Uploaders: Daigo Moriwaki <daigo@debian.org>, Lucas Nussbaum <lucas@lucas-nussbaum.net>, Antonio Terceiro <terceiro@debian.org>
+Maintainer: Antonio Terceiro <terceiro@debian.org>
+Uploaders:
+ akira yamada <akira@debian.org>,
+ Daigo Moriwaki <daigo@debian.org>,
+ Lucas Nussbaum <lucas@lucas-nussbaum.net>,
+ Christian Hofstaedtler <zeha@debian.org>,
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
 Homepage: http://www.ruby-lang.org/

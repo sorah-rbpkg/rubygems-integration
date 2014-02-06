@@ -1,10 +1,12 @@
-ruby-defaults (1:1.9.3.2) UNRELEASED; urgency=medium
+ruby-defaults (1:1.9.3.2) unstable; urgency=medium
 
   * Breaks ruby-build << 0.1.0 and rbenv << 0.4.0-1
     - The removal of the alternatives entries breaks both packages ability to
       detect installed interpreters.
+  * Put myself as maintainer, move akira yamada <akira@debian.org> to
+    Uploaders:. Add Christian Hofstaedtler to Uploaders:
 
- -- Antonio Terceiro <terceiro@debian.org>  Thu, 06 Feb 2014 13:32:05 -0300
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 06 Feb 2014 15:07:57 -0300
 
 ruby-defaults (1:1.9.3.1) unstable; urgency=medium
 
