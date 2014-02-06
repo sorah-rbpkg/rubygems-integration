@@ -1,3 +1,10 @@
+ruby-defaults (1:1.9.3.3) unstable; urgency=medium
+
+  * Breaks ruby-switch <= 0.1.0 and rbenv <= 0.4.0-1
+    - the mention of `ruby-build` in the previous release was a typo.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 06 Feb 2014 17:56:55 -0300
+
 ruby-defaults (1:1.9.3.2) unstable; urgency=medium
 
   * Breaks ruby-build << 0.1.0 and rbenv << 0.4.0-1
