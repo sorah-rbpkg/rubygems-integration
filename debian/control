@@ -17,6 +17,8 @@ Conflicts: irb, rdoc, ruby1.8, rubygems
 Breaks: apt-listbugs (<< 0.1.6),
  ruby1.9.1 (<< 1.9.3.484-2),
  ruby2.0 (<< 2.0.0.484-1),
+ ruby-switch (<< 0.1.0),
+ rbenv (<< 0.4.0-1),
 Replaces:
  irb,
  rdoc,
