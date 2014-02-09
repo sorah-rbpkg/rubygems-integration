@@ -1,3 +1,12 @@
+rubygems-integration (1.5) unstable; urgency=medium
+
+  * Add /usr/share/rubygems-integration/all to the gem path.
+    This will allow installing a single gemspec for `Architecture: all`
+    packages that will work with every interpreter, and won't require a new
+    upload when a new interpreter comes along.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 10 Feb 2014 12:16:17 -0300
+
 rubygems-integration (1.4) unstable; urgency=medium
 
   [ Christian Hofstaedtler ]
