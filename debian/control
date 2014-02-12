@@ -77,9 +77,6 @@ Package: libruby
 Section: libs
 Architecture: all
 Depends: libruby1.9.1 (>= 1.9.3.194-1), ${misc:Depends}
-Conflicts: libsdbm-ruby (<< 4), libdl-ruby (<< 4), libpty-ruby (<< 4), libbigdecimal-ruby (<< 4), libsyslog-ruby (<< 4), libstrscan-ruby (<< 4), libiconv-ruby (<< 4), libracc-runtime-ruby (<< 4), libdrb-ruby (<< 4), liberb-ruby (<< 4), libtest-unit-ruby (<< 4), librexml-ruby (<< 4), libxmlrpc-ruby (<< 4), libwebrick-ruby (<< 4), libyaml-ruby (<< 4), libzlib-ruby (<< 4), libcurses-ruby (<< 4), libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
-Replaces: libsdbm-ruby (<< 4), libdl-ruby (<< 4), libpty-ruby (<< 4), libbigdecimal-ruby (<< 4), libsyslog-ruby (<< 4), libstrscan-ruby (<< 4), libiconv-ruby (<< 4), libracc-runtime-ruby (<< 4), libdrb-ruby (<< 4), liberb-ruby (<< 4), libtest-unit-ruby (<< 4), librexml-ruby (<< 4), libxmlrpc-ruby (<< 4), libwebrick-ruby (<< 4), libyaml-ruby (<< 4), libzlib-ruby (<< 4), libcurses-ruby (<< 4), libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
-Provides: libsdbm-ruby, libdl-ruby, libpty-ruby, libbigdecimal-ruby, libsyslog-ruby, libstrscan-ruby, libiconv-ruby, libracc-runtime-ruby, libdrb-ruby, liberb-ruby, libtest-unit-ruby, librexml-ruby, libxmlrpc-ruby, libwebrick-ruby, libyaml-ruby, libzlib-ruby, libcurses-ruby, libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
 Description: Libraries necessary to run Ruby
  Ruby is the interpreted scripting language for quick and easy
  object-oriented programming.  It has many features to process text
@@ -94,9 +91,6 @@ Description: Libraries necessary to run Ruby
 Package: libtcltk-ruby
 Architecture: all
 Depends: libtcltk-ruby1.9.1 (>= 1.9.3.194-1), ${misc:Depends}
-Conflicts: libtk-ruby (<< 4)
-Replaces: libtk-ruby (<< 4)
-Provides: libtk-ruby
 Description: Tcl/Tk interface for Ruby
  tcltklib is an extension library for Ruby.  It makes Ruby
  programs to be able to use low level interface for the Tcl/Tk.

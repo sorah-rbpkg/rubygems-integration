@@ -5,6 +5,8 @@ ruby-defaults (1:1.9.3.4) unstable; urgency=medium
   * ruby-all-dev: ship library with data about supported interpreters
     - ruby_debian_dev.rb will be be used by gem2deb
   * Add a simple DEP-8 smoke test
+  * Drop Conflicts/Replaces/Provides on obsolete packages that are not even on
+    squeeze anymore
 
  -- Antonio Terceiro <terceiro@debian.org>  Wed, 12 Feb 2014 09:33:39 -0300
 
