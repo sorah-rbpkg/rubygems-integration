@@ -1,3 +1,10 @@
+ruby-defaults (1:1.9.3.4) UNRELEASED; urgency=medium
+
+  * ruby-all-dev: also depend on the actualy interpreters and not only on the
+    -dev packages
+
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 12 Feb 2014 09:18:18 -0300
+
 ruby-defaults (1:1.9.3.3) unstable; urgency=medium
 
   * Breaks ruby-switch <= 0.1.0 and rbenv <= 0.4.0-1
