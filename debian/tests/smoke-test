@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -x
+set -e
+
+ruby -v
+
+gem env
+
+gem list
