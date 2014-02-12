@@ -12,6 +12,7 @@ Standards-Version: 3.9.5
 Homepage: http://www.ruby-lang.org/
 Vcs-Git: git://git.debian.org/collab-maint/ruby-defaults.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/ruby-defaults.git;a=summary
+XS-Testsuite: autopkgtest
 
 Package: ruby
 Architecture: all
