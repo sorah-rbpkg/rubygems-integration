@@ -1,13 +1,18 @@
 Source: ruby-defaults
 Section: ruby
 Priority: optional
-Maintainer: akira yamada <akira@debian.org>
-Uploaders: Daigo Moriwaki <daigo@debian.org>, Lucas Nussbaum <lucas@lucas-nussbaum.net>, Antonio Terceiro <terceiro@debian.org>, Christian Hofstaedtler <zeha@debian.org>
+Maintainer: Antonio Terceiro <terceiro@debian.org>
+Uploaders:
+ akira yamada <akira@debian.org>,
+ Daigo Moriwaki <daigo@debian.org>,
+ Lucas Nussbaum <lucas@lucas-nussbaum.net>,
+ Christian Hofstaedtler <zeha@debian.org>,
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
 Homepage: http://www.ruby-lang.org/
-Vcs-Git: git://git.debian.org/collab-maint/ruby-defaults.git
-Vcs-Browser: http://git.debian.org/?p=collab-maint/ruby-defaults.git;a=summary
+Vcs-Git: git://anonscm.debian.org/collab-maint/ruby-defaults.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/ruby-defaults.git
+XS-Testsuite: autopkgtest
 
 Package: ruby
 Architecture: all
@@ -17,6 +22,8 @@ Conflicts: irb, rdoc, ruby1.8, rubygems
 Breaks: apt-listbugs (<< 0.1.6),
  ruby1.9.1 (<< 1.9.3.484-2),
  ruby2.0 (<< 2.0.0.484-1),
+ ruby-switch (<= 0.1.0),
+ rbenv (<= 0.4.0-1),
 Replaces:
  irb,
  rdoc,
@@ -52,7 +59,7 @@ Description: Header files for compiling extension modules for Ruby (default vers
 Package: ruby-all-dev
 Section: devel
 Architecture: all
-Depends: ruby1.9.1-dev (>= 1.9.3.194-1), ruby2.0-dev (>= 2.0.0.484-1), ${misc:Depends}
+Depends: ruby1.9.1 (>= 1.9.3.194-1), ruby1.9.1-dev (>= 1.9.3.194-1), ruby2.0 (>= 2.0.0.484-1), ruby2.0-dev (>= 2.0.0.484-1), ${misc:Depends}
 Description: Header files for compiling extension modules for Ruby (all versions)
  Ruby is the interpreted scripting language for quick and easy
  object-oriented programming.  It has many features to process text
@@ -70,9 +77,6 @@ Package: libruby
 Section: libs
 Architecture: all
 Depends: libruby2.0 (>= 2.0.0.484-1), ${misc:Depends}
-Conflicts: libsdbm-ruby (<< 4), libdl-ruby (<< 4), libpty-ruby (<< 4), libbigdecimal-ruby (<< 4), libsyslog-ruby (<< 4), libstrscan-ruby (<< 4), libiconv-ruby (<< 4), libracc-runtime-ruby (<< 4), libdrb-ruby (<< 4), liberb-ruby (<< 4), libtest-unit-ruby (<< 4), librexml-ruby (<< 4), libxmlrpc-ruby (<< 4), libwebrick-ruby (<< 4), libyaml-ruby (<< 4), libzlib-ruby (<< 4), libcurses-ruby (<< 4), libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
-Replaces: libsdbm-ruby (<< 4), libdl-ruby (<< 4), libpty-ruby (<< 4), libbigdecimal-ruby (<< 4), libsyslog-ruby (<< 4), libstrscan-ruby (<< 4), libiconv-ruby (<< 4), libracc-runtime-ruby (<< 4), libdrb-ruby (<< 4), liberb-ruby (<< 4), libtest-unit-ruby (<< 4), librexml-ruby (<< 4), libxmlrpc-ruby (<< 4), libwebrick-ruby (<< 4), libyaml-ruby (<< 4), libzlib-ruby (<< 4), libcurses-ruby (<< 4), libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
-Provides: libsdbm-ruby, libdl-ruby, libpty-ruby, libbigdecimal-ruby, libsyslog-ruby, libstrscan-ruby, libiconv-ruby, libracc-runtime-ruby, libdrb-ruby, liberb-ruby, libtest-unit-ruby, librexml-ruby, libxmlrpc-ruby, libwebrick-ruby, libyaml-ruby, libzlib-ruby, libcurses-ruby, libopenssl-ruby, libreadline-ruby, libdbm-ruby, libgdbm-ruby
 Description: Libraries necessary to run Ruby
  Ruby is the interpreted scripting language for quick and easy
  object-oriented programming.  It has many features to process text
@@ -87,9 +91,6 @@ Description: Libraries necessary to run Ruby
 Package: libtcltk-ruby
 Architecture: all
 Depends: ruby2.0-tcltk (>= 2.0.0.484-1), ${misc:Depends}
-Conflicts: libtk-ruby (<< 4)
-Replaces: libtk-ruby (<< 4)
-Provides: libtk-ruby
 Description: Tcl/Tk interface for Ruby
  tcltklib is an extension library for Ruby.  It makes Ruby
  programs to be able to use low level interface for the Tcl/Tk.
