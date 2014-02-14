@@ -1,3 +1,9 @@
+ruby-defaults (1:2.0.0.1~exp2) experimental; urgency=medium
+
+  * Merge changes from unstable, for newer gem2deb.
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Tue, 04 Feb 2014 23:58:19 +0100
+
 ruby-defaults (1:1.9.3.4) unstable; urgency=medium
 
   * ruby-all-dev: also depend on the actual interpreters and not only on the
