@@ -1,3 +1,9 @@
+ruby-defaults (1:2.0.0.1~exp3) UNRELEASED; urgency=medium
+
+  * ruby-all-dev: migrate from Ruby 1.9.1 and 2.0 to Ruby 2.0 and 2.1
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 29 Mar 2014 14:35:35 -0300
+
 ruby-defaults (1:2.0.0.1~exp2) experimental; urgency=medium
 
   * Merge changes from unstable, for newer gem2deb.
