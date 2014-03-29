@@ -1,6 +1,17 @@
 ruby-defaults (1:2.0.0.1~exp3) UNRELEASED; urgency=medium
 
   * ruby-all-dev: migrate from Ruby 1.9.1 and 2.0 to Ruby 2.0 and 2.1
+  * ruby: remove Breaks/Conflicts/Replaces against old interpreter packages
+    as this will force the removal of old interpreters from users' systems
+    (Closes: #740733)
+    .
+    The following upgrade scenarios from wheezy were tested, still work fine,
+    and leave the old interpreters alone:
+    - ruby
+    - ruby + ruby1.8
+    - ruby + apt-listbugs
+    - ruby + ruby1.8 + apt-listbugs
+    - ruby1.8 + apt-listbugs
 
  -- Antonio Terceiro <terceiro@debian.org>  Sat, 29 Mar 2014 14:35:35 -0300
 
