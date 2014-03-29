@@ -1,4 +1,4 @@
-ruby-defaults (1:2.0.0.1~exp3) UNRELEASED; urgency=medium
+ruby-defaults (1:2.0.0.1~exp3) experimental; urgency=medium
 
   * ruby-all-dev: migrate from Ruby 1.9.1 and 2.0 to Ruby 2.0 and 2.1
   * ruby: remove Breaks/Conflicts/Replaces against old interpreter packages
@@ -13,7 +13,7 @@ ruby-defaults (1:2.0.0.1~exp3) UNRELEASED; urgency=medium
     - ruby + ruby1.8 + apt-listbugs
     - ruby1.8 + apt-listbugs
 
- -- Antonio Terceiro <terceiro@debian.org>  Sat, 29 Mar 2014 14:35:35 -0300
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 29 Mar 2014 16:12:05 -0300
 
 ruby-defaults (1:2.0.0.1~exp2) experimental; urgency=medium
 
