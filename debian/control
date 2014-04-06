@@ -18,15 +18,11 @@ Package: ruby
 Architecture: all
 Depends: ruby2.0 (>= 2.0.0.484-1), ${misc:Depends}
 Suggests: ri, ruby-dev
-Conflicts: irb, rdoc, rubygems
 Breaks: apt-listbugs (<< 0.1.6),
  ruby-switch (<= 0.1.0),
  rbenv (<= 0.4.0-1),
-Replaces:
- irb,
- rdoc,
- rubygems
-Provides: irb, rdoc
+Replaces: irb, rdoc, rubygems
+Provides: irb, rdoc, rubygems
 Description: Interpreter of object-oriented scripting language Ruby (default version)
  Ruby is the interpreted scripting language for quick and easy
  object-oriented programming.  It has many features to process text
