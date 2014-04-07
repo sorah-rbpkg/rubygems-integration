@@ -2,6 +2,15 @@ ruby-defaults (1:2.0.0.2) UNRELEASED; urgency=medium
 
   * Remove Conflicts: irb, rdoc, rubygems; Add Provides: rubygems
     (Closes: #743780)
+  * Improve handling of migration from alternatives (Closes: #743729)
+    - ruby.preinst: remove alternatives entries
+    - ruby.postinst:
+      + fix any links left pointing to ruby1.8 or ruby1.9.1 making them point
+        back to ruby2.
+      + hack installed ruby1.8.postinst and ruby1.9.1.postinst so they do not
+        re-add the alternatives entries if reconfigured.
+    - debian/triggers: watch /usr/bin/ruby{1.8,1.9.1} so that if the user
+      reinstalls ruby1.8 or ruby1.9.1, ruby.postinst will be executed again.
 
  -- Antonio Terceiro <terceiro@debian.org>  Sun, 06 Apr 2014 10:09:29 -0300
 

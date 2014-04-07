@@ -18,7 +18,8 @@ Package: ruby
 Architecture: all
 Depends: ruby2.0 (>= 2.0.0.484-1), ${misc:Depends}
 Suggests: ri, ruby-dev
-Breaks: apt-listbugs (<< 0.1.6),
+Breaks:
+ apt-listbugs (<< 0.1.6),
  ruby-switch (<= 0.1.0),
  rbenv (<= 0.4.0-1),
 Replaces: irb, rdoc, rubygems

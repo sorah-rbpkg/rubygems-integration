@@ -1,5 +1,10 @@
 #!/usr/bin/make -f
 
+# XXX remember to regenerate debian/ruby.postinst when you change either of
+# these variables.
+#
+# $ debian/rules debian/ruby.postinst
+#
 export DEBIAN_DEFAULT_RUBY_VERSION=2.0
 export DEBIAN_RUBY_PROGRAMS = \
   erb \
@@ -12,3 +17,6 @@ export DEBIAN_RUBY_PROGRAMS = \
 
 %:
 	dh $@
+
+debian/ruby.postinst: debian/ruby.postinst.in
+	sed -e 's/@@DEBIAN_DEFAULT_RUBY_VERSION@@/$(DEBIAN_DEFAULT_RUBY_VERSION)/g; s/@@DEBIAN_RUBY_PROGRAMS@@/$(DEBIAN_RUBY_PROGRAMS)/g' $< > $@ || ($(RM) $@; false)
