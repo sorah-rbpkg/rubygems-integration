@@ -24,7 +24,7 @@ for package in ruby1.8 ruby1.9.1; do
   postinst=/var/lib/dpkg/info/$package.postinst
   if [ -e $postinst ]
   then
-    sed -i -e 's/^\s*update-alternatives/echo DISABLED: &/' $postinst
+    sed -i -e 's/^\s*update-alternatives/: &/' $postinst
   fi
 done
 
