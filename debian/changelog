@@ -1,4 +1,4 @@
-rubygems-integration (1.6) UNRELEASED; urgency=medium
+rubygems-integration (1.6) unstable; urgency=medium
 
   * debian/tests/package-list: make output easier to read. First output the
     list of gems to a file, then grep that file.
@@ -6,7 +6,7 @@ rubygems-integration (1.6) UNRELEASED; urgency=medium
   * Add support for disabling rubygems-integration by setting an environment
     variable DEBIAN_DISABLE_RUBYGEMS_INTEGRATION.
 
- -- Antonio Terceiro <terceiro@debian.org>  Thu, 10 Apr 2014 16:16:36 -0300
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 10 Apr 2014 16:47:15 -0300
 
 rubygems-integration (1.5) unstable; urgency=medium
 
