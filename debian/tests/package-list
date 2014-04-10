@@ -1,9 +1,14 @@
 #!/bin/sh
 
-set -e
+exec 2>&1
+
+set -ex
+
+gems=$ADTTMP/gems
+gem list > $gems
 
 # a gem from the "default gems"
-gem list | grep ^rdoc
+grep ^rdoc $gems
 
 # a system gem, installed by this test dependencies
-gem list | grep ^ffi
+grep ^ffi $gems
