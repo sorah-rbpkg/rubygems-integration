@@ -1,3 +1,5 @@
+unless ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
+
 class << Gem
 
   alias :upstream_default_dir :default_dir
@@ -26,4 +28,6 @@ if RUBY_VERSION >= '2.0' then
     end
 
   end
+end
+
 end
