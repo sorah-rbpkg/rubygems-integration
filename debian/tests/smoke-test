@@ -9,4 +9,9 @@ ruby -v
 
 gem env
 
-gem list
+gems=$ADTTMP/gems
+gem list | tee $gems
+
+# some standard gems should be available
+grep rdoc $gems
+grep rake $gems
