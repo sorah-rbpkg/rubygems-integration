@@ -1,3 +1,12 @@
+rubygems-integration (1.8) UNRELEASED; urgency=medium
+
+  * Improve smoke tests in debian/tests/package-list.
+    .
+    Test and gem installed together with the interpreter, one arch:all and one
+    arch:any
+
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 30 Apr 2014 11:11:12 -0300
+
 rubygems-integration (1.7) unstable; urgency=medium
 
   * Drop dependency on Ruby, since the interpreters now actually depend on

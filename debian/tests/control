@@ -1,2 +1,2 @@
 Tests: package-list
-Depends: @, ruby-ffi
+Depends: @, ruby-all-dev, ruby-ffi, ruby-magic
