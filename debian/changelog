@@ -2,6 +2,12 @@ rubygems-integration (1.7) UNRELEASED; urgency=medium
 
   * Drop dependency on Ruby, since the interpreters now actually depend on
     this package.
+  * Add workaround for loading ruby2.1-specific gemspecs from wrong path used
+    by gem2deb (Closes: #746470)
+    .
+    The definitive fix belongs in gem2deb and is making it install the
+    gemspecs to the correct place so that rubygems-integration does not have
+    to be changed again when the next version comes.
 
  -- Antonio Terceiro <terceiro@debian.org>  Wed, 30 Apr 2014 10:25:57 -0300
 

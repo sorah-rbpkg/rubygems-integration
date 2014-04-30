@@ -14,7 +14,16 @@ class << Gem
 
   alias :upstream_default_path :default_path
   def default_path
-    upstream_default_path + [File.join('/usr/share/rubygems-integration', Gem::ConfigMap[:ruby_version]), '/usr/share/rubygems-integration/all']
+    extra_path = nil
+    if RbConfig::CONFIG['ruby_version'] == '2.1.0'
+      extra_path = File.join('/usr/share/rubygems-integration', '2.1')
+    end
+
+    upstream_default_path + [
+      File.join('/usr/share/rubygems-integration', Gem::ConfigMap[:ruby_version]),
+      extra_path,
+      '/usr/share/rubygems-integration/all'
+    ].compact
   end
 
 end
