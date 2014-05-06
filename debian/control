@@ -16,7 +16,7 @@ XS-Testsuite: autopkgtest
 
 Package: ruby
 Architecture: all
-Depends: ruby2.0 (>= 2.0.0.484-1), ${misc:Depends}
+Depends: ruby2.1, ${misc:Depends}
 Suggests: ri, ruby-dev
 Breaks:
  apt-listbugs (<< 0.1.6),
@@ -31,12 +31,12 @@ Description: Interpreter of object-oriented scripting language Ruby (default ver
  straight-forward, and extensible.
  .
  This package is a dependency package, which depends on Debian's default Ruby
- version (currently v2.0).
+ version (currently v2.1).
 
 Package: ruby-dev
 Section: devel
 Architecture: all
-Depends: ruby2.0-dev (>= 2.0.0.484-1), ${misc:Depends}
+Depends: ruby2.1-dev, ${misc:Depends}
 Description: Header files for compiling extension modules for Ruby (default version)
  Ruby is the interpreted scripting language for quick and easy
  object-oriented programming.  It has many features to process text
@@ -48,12 +48,12 @@ Description: Header files for compiling extension modules for Ruby (default vers
  many gems.
  .
  This package is a dependency package, which depends on Debian's default Ruby
- version (currently v2.0).
+ version (currently v2.1).
 
 Package: ruby-all-dev
 Section: devel
 Architecture: all
-Depends: ruby2.0 (>= 2.0.0.484-1), ruby2.0-dev (>= 2.0.0.484-1), ruby2.1, ruby2.1-dev, ${misc:Depends}
+Depends: ruby2.1, ruby2.1-dev, ${misc:Depends}
 Description: Header files for compiling extension modules for Ruby (all versions)
  Ruby is the interpreted scripting language for quick and easy
  object-oriented programming.  It has many features to process text
@@ -70,7 +70,7 @@ Description: Header files for compiling extension modules for Ruby (all versions
 Package: libruby
 Section: libs
 Architecture: all
-Depends: libruby2.0 (>= 2.0.0.484-1), ${misc:Depends}
+Depends: libruby2.1, ${misc:Depends}
 Description: Libraries necessary to run Ruby
  Ruby is the interpreted scripting language for quick and easy
  object-oriented programming.  It has many features to process text
@@ -80,21 +80,21 @@ Description: Libraries necessary to run Ruby
  This package includes the 'libruby' library, necessary to run Ruby.
  .
  This package is a dependency package, which depends on Debian's default Ruby
- version (currently v2.0).
+ version (currently v2.1).
 
 Package: libtcltk-ruby
 Architecture: all
-Depends: ruby2.0-tcltk (>= 2.0.0.484-1), ${misc:Depends}
+Depends: ruby2.1-tcltk, ${misc:Depends}
 Description: Tcl/Tk interface for Ruby
  tcltklib is an extension library for Ruby.  It makes Ruby
  programs to be able to use low level interface for the Tcl/Tk.
  .
  This package is a dependency package, which depends on Debian's default Ruby
- version (currently v2.0).
+ version (currently v2.1).
 
 Package: ri
 Architecture: all
-Depends: ruby2.0 (>= 2.0.0.484-1), ${misc:Depends}
+Depends: ruby2.1, ${misc:Depends}
 Description: Ruby Interactive reference
  ri is a command line tool that displays descriptions of built-in Ruby
  methods, classes, and modules. For methods, it shows you the calling
@@ -107,7 +107,7 @@ Description: Ruby Interactive reference
  The ri executable itself is in the ruby package.
  .
  This package is a dependency package, which depends on Debian's default Ruby
- version (currently v2.0).
+ version (currently v2.1).
 
 Package: ruby-full
 Architecture: all
@@ -119,5 +119,5 @@ Description: Ruby full installation (default version)
  of the Tcl/Tk bindings for Ruby, which are only recommended.
  .
  This package is a dependency package, which depends on Debian's default Ruby
- version (currently v2.0).
+ version (currently v2.1).
 

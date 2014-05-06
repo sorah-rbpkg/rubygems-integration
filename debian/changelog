@@ -1,9 +1,12 @@
-ruby-defaults (1:2.0.0.3) UNRELEASED; urgency=medium
+ruby-defaults (1:2.1.0.0) experimental; urgency=medium
 
+  * Switch to Ruby 2.1 and drop support for Ruby 2.0
+  * ruby_all_dev.rb now also provides RUBY_API_VERSION for gem2deb to use to
+    determine where to install gemspecs for binary extensions.
   * debian/tests/smoke-test: check for default gems that are expected to be
     there (rdoc, rake)
 
- -- Antonio Terceiro <terceiro@debian.org>  Thu, 10 Apr 2014 12:14:07 -0300
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 06 May 2014 20:02:18 -0300
 
 ruby-defaults (1:2.0.0.2) unstable; urgency=medium
 
