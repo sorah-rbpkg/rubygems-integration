@@ -1,7 +1,7 @@
 ruby-defaults (1:2.1.0.1) unstable; urgency=medium
 
   [ Christian Hofstaedtler ]
-  * Add Breaks: ruby-debian without ruby2.1 extension
+  * Add Breaks: ruby-debian without ruby2.1 extension (Closes: #747406)
 
   [ Antonio Terceiro ]
   * Upload to unstable, switching the default to ruby2.1 and dropping support
