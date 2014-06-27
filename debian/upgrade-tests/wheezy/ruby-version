@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -ex
+
+expr "$(ruby -v)" : '^ruby 2\.1'
