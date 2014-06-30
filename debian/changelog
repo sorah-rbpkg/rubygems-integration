@@ -1,6 +1,6 @@
 ruby-defaults (1:2.1.0.2) UNRELEASED; urgency=medium
 
-  * debian/upgrade-tests/: add automated upgrade autopkgtest smoke tests
+  * debian/tests/wheezy2jessie_*: add automated upgrade autopkgtest smoke tests
 
  -- Antonio Terceiro <terceiro@debian.org>  Fri, 27 Jun 2014 20:46:27 -0300
 
