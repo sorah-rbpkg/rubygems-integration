@@ -1,3 +1,11 @@
 Tests: smoke-test
 Depends: ruby
 Restrictions: allow-stderr
+
+Tests: wheezy2jessie_apt-listbugs_ruby1.8
+Depends: apt-listbugs, ruby1.8
+Restrictions: allow-stderr
+
+Tests: wheezy2jessie_ruby-version
+Depends: ruby
+Restrictions: allow_stderr

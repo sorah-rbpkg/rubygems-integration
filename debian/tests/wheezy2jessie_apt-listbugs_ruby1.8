@@ -1,5 +1,7 @@
 #!/bin/sh
 
+[ "$ADT_UPGRADE_FROM" = 'wheezy' ] || exit 0
+
 set -ex
 
 apt-listbugs list apt/0.9.9
