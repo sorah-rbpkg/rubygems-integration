@@ -8,4 +8,4 @@ Restrictions: allow-stderr
 
 Tests: wheezy2jessie_ruby-version
 Depends: ruby
-Restrictions: allow_stderr
+Restrictions: allow-stderr
