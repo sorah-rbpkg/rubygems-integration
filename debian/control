@@ -55,18 +55,23 @@ Package: ruby-all-dev
 Section: devel
 Architecture: all
 Depends: ruby2.1, ruby2.1-dev, ${misc:Depends}
-Description: Header files for compiling extension modules for Ruby (all versions)
+Description: Ruby development environment (all versions supported in Debian)
  Ruby is the interpreted scripting language for quick and easy
  object-oriented programming.  It has many features to process text
  files and to do system management tasks (as in perl).  It is simple,
  straight-forward, and extensible.
  .
- This package contains the header files and the mkmf library, necessary
- to make extension library for Ruby. It is also required to build
- many gems.
+ This package depends on the respective development packages for every Ruby
+ version currently supported by Debian. This will usually be a single version
+ (the default one), but during transitions multiple versions might be
+ supported.
  .
- This package is a dependency package, which depends on all versions of Ruby
- that are supported in Debian.
+ To programatically list all the supported versions, install the `gem2deb`
+ package and run `dh_ruby --print-supported`. To determine which is the default
+ version, just dereference the /usr/bin/ruby symbolic link.
+ .
+ If you are not building Ruby packages for Debian, you probably do not need
+ this package.
 
 Package: libruby
 Section: libs
