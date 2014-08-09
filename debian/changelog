@@ -1,3 +1,12 @@
+ruby-defaults (1:2.1.0.3) UNRELEASED; urgency=medium
+
+  * ruby_debian_dev.rb: consolidate information about Ruby interpreters in a
+    single data structure: RubyDebianDev::RUBY_INTERPRETERS.
+    .
+    The existing constants are still there for backwards-compatibility.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 09 Aug 2014 17:54:56 -0300
+
 ruby-defaults (1:2.1.0.2) unstable; urgency=medium
 
   * README.Debian: document basic usage instructions to ruby, ruby-dev and
