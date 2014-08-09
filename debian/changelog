@@ -4,6 +4,10 @@ ruby-defaults (1:2.1.0.3) UNRELEASED; urgency=medium
     single data structure: RubyDebianDev::RUBY_INTERPRETERS.
     .
     The existing constants are still there for backwards-compatibility.
+    .
+    Besides the pre-existing information we already had, there is now a
+    `min_ruby_dependency` key, which is the minimum ruby dependency that
+    packages built against that given ruby version should have.
 
  -- Antonio Terceiro <terceiro@debian.org>  Sat, 09 Aug 2014 17:54:56 -0300
 

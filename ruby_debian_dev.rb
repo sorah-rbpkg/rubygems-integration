@@ -6,6 +6,7 @@ module RubyDebianDev
       binary:              '/usr/bin/ruby2.1',
       api_version:         '2.1.0',
       shared_library:      'libruby2.1',
+      min_ruby_dependency: 'ruby (>= 1:2.1)',
     },
   }
 
