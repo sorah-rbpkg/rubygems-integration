@@ -1,6 +1,7 @@
 ruby-defaults (1:2.1.0.2) UNRELEASED; urgency=medium
 
-  * ruby-all-dev: document basic usage facts in package description
+  * README.Debian: document basic usage instructions to ruby, ruby-dev and
+    ruby-all-dev in package description
     (Closes: #755779)
 
  -- Antonio Terceiro <terceiro@debian.org>  Fri, 27 Jun 2014 20:46:27 -0300
