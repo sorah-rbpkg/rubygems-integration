@@ -1,10 +1,20 @@
-ruby-defaults (1:2.1.0.2) UNRELEASED; urgency=medium
+ruby-defaults (1:2.1.0.2) unstable; urgency=medium
 
   * README.Debian: document basic usage instructions to ruby, ruby-dev and
     ruby-all-dev in package description
-    (Closes: #755779)
+    Closes: #755779
+  * ri: add dependency on documentation package (currently ruby2.1-doc)
+    Closes: #754563
+  * Added 2 functional wheezy → jessie upgrade tests:
+    - wheezy2jessie_apt-listbugs_ruby1.8: installs apt-listbugs and ruby1.8,
+      upgrades to jessie, and checks that apt-listbugs works fine.
+    - wheezy2jessie_ruby-version: installs ruby, upgrades to jessie, and
+      checks that we got Ruby 2.1
+    .
+    These upgrade tests require a patch to autopkgtest that was not released
+    yet, and will be no-ops until autopkgtest gets support for upgrade tests.
 
- -- Antonio Terceiro <terceiro@debian.org>  Fri, 27 Jun 2014 20:46:27 -0300
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 09 Aug 2014 09:15:53 -0300
 
 ruby-defaults (1:2.1.0.1) unstable; urgency=medium
 

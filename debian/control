@@ -100,7 +100,7 @@ Description: Tcl/Tk interface for Ruby
 
 Package: ri
 Architecture: all
-Depends: ruby2.1, ${misc:Depends}
+Depends: ruby2.1, ruby2.1-doc, ${misc:Depends}
 Description: Ruby Interactive reference
  ri is a command line tool that displays descriptions of built-in Ruby
  methods, classes, and modules. For methods, it shows you the calling
