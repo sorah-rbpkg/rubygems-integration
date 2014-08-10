@@ -10,7 +10,7 @@ module RubyDebianDev
     },
   }
 
-  def self.min_ruby_version_for(shared_library)
+  def self.min_ruby_dependency_for(shared_library)
     RUBY_INTERPRETERS.each do |int,data|
       if data[:shared_library] == shared_library
         return data[:min_ruby_dependency]
