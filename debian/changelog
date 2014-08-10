@@ -1,4 +1,4 @@
-ruby-defaults (1:2.1.0.3) UNRELEASED; urgency=medium
+ruby-defaults (1:2.1.0.3) unstable; urgency=medium
 
   * ruby_debian_dev.rb: consolidate information about Ruby interpreters in a
     single data structure: RubyDebianDev::RUBY_INTERPRETERS.
@@ -11,7 +11,7 @@ ruby-defaults (1:2.1.0.3) UNRELEASED; urgency=medium
   * added RubyDebianDev.min_ruby_dependency_for(shared_library) API for querying
     that piece of data.
 
- -- Antonio Terceiro <terceiro@debian.org>  Sat, 09 Aug 2014 17:54:56 -0300
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 10 Aug 2014 18:49:12 -0300
 
 ruby-defaults (1:2.1.0.2) unstable; urgency=medium
 
