@@ -8,6 +8,8 @@ ruby-defaults (1:2.1.0.3) UNRELEASED; urgency=medium
     Besides the pre-existing information we already had, there is now a
     `min_ruby_dependency` key, which is the minimum ruby dependency that
     packages built against that given ruby version should have.
+  * added RubyDebianDev.min_ruby_dependency(shared_library) API for querying
+    that piece of data.
 
  -- Antonio Terceiro <terceiro@debian.org>  Sat, 09 Aug 2014 17:54:56 -0300
 
