@@ -1,0 +1,7 @@
+Tests: wheezy2jessie-apt-listbugs-ruby1.8
+Depends: apt-listbugs, ruby1.8
+Restrictions: allow-stderr
+
+Tests: wheezy2jessie-ruby-version
+Depends: ruby
+Restrictions: allow-stderr

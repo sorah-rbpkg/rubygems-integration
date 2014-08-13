@@ -1,3 +1,11 @@
+ruby-defaults (1:2.1.0.4) unstable; urgency=medium
+
+  * move wheezy2jessie upgrade tests to their own control file
+    Now that ruby1.8 is gone from unstable, this actually makes ruby-defaults
+    test suite fail.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 20 Aug 2014 09:03:42 -0300
+
 ruby-defaults (1:2.1.0.3) unstable; urgency=medium
 
   * ruby_debian_dev.rb: consolidate information about Ruby interpreters in a
