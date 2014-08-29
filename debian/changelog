@@ -2,9 +2,8 @@ rubygems-integration (1.8) UNRELEASED; urgency=medium
 
   * Improve smoke tests in debian/tests/package-list.
     .
-    Test a gem installed together with the interpreter, one arch:all and one
+    Test and gem installed together with the interpreter, one arch:all and one
     arch:any
-  * Install to $HOME if not being run as root
 
  -- Antonio Terceiro <terceiro@debian.org>  Wed, 30 Apr 2014 11:11:12 -0300
 

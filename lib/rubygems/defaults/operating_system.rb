@@ -1,25 +1,15 @@
 unless ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
 
-require 'etc'
-
 class << Gem
 
   alias :upstream_default_dir :default_dir
   def default_dir
-    if Etc.getpwuid.uid == 0
-      File.join('/', 'var', 'lib', 'gems', Gem::ConfigMap[:ruby_version])
-    else
-      user_dir
-    end
+    File.join('/', 'var', 'lib', 'gems', Gem::ConfigMap[:ruby_version])
   end
 
   alias :upstream_default_bindir :default_bindir
   def default_bindir
-    if Etc.getpwuid.uid == 0
-      File.join('/', 'usr', 'local', 'bin')
-    else
-      File.join(user_dir, 'bin')
-    end
+    File.join('/', 'usr', 'local', 'bin')
   end
 
   alias :upstream_default_path :default_path
@@ -30,11 +20,10 @@ class << Gem
     end
 
     upstream_default_path + [
-      File.join('/', 'var', 'lib', 'gems', Gem::ConfigMap[:ruby_version]),
       File.join('/usr/share/rubygems-integration', Gem::ConfigMap[:ruby_version]),
       extra_path,
       '/usr/share/rubygems-integration/all'
-    ].compact.uniq
+    ].compact
   end
 
 end
