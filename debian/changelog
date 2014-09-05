@@ -1,4 +1,4 @@
-rubygems-integration (1.8) UNRELEASED; urgency=medium
+rubygems-integration (1.8) unstable; urgency=medium
 
   [ Antonio Terceiro ]
   * Improve smoke tests in debian/tests/package-list.
@@ -7,10 +7,11 @@ rubygems-integration (1.8) UNRELEASED; urgency=medium
     arch:any
 
   [ Christian Hofstaedtler ]
+  * Add myself to Uploaders
   * Advise rubygems to load SSL certificates from the ca-certificates
     provided list. (Closes: #689074)
 
- -- Antonio Terceiro <terceiro@debian.org>  Wed, 30 Apr 2014 11:11:12 -0300
+ -- Christian Hofstaedtler <zeha@debian.org>  Fri, 05 Sep 2014 02:37:35 +0200
 
 rubygems-integration (1.7) unstable; urgency=medium
 
