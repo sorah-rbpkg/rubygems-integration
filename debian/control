@@ -11,7 +11,7 @@ XS-Testsuite: autopkgtest
 
 Package: rubygems-integration
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ca-certificates
 Suggests: bundler
 Multi-Arch: foreign
 Description: integration of Debian Ruby packages with Rubygems

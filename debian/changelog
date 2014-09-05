@@ -1,9 +1,14 @@
 rubygems-integration (1.8) UNRELEASED; urgency=medium
 
+  [ Antonio Terceiro ]
   * Improve smoke tests in debian/tests/package-list.
     .
     Test a gem that comes together with the interpreter, one arch:all and one
     arch:any
+
+  [ Christian Hofstaedtler ]
+  * Advise rubygems to load SSL certificates from the ca-certificates
+    provided list. (Closes: #689074)
 
  -- Antonio Terceiro <terceiro@debian.org>  Wed, 30 Apr 2014 11:11:12 -0300
 

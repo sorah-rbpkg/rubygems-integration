@@ -1,6 +1,9 @@
 unless ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
 
 class << Gem
+  OPERATING_SYSTEM_DEFAULTS = {
+    :ssl_ca_cert => '/etc/ssl/certs/ca-certificates.crt'
+  }
 
   alias :upstream_default_dir :default_dir
   def default_dir
