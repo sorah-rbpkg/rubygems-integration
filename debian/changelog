@@ -3,6 +3,7 @@ rubygems-integration (1.9) UNRELEASED; urgency=medium
   * Include /usr/lib/$(triplet)/rubygems-integration/$(ruby_version) in the
     Rubygems path. This will be used to support Debian packages that install
     as "proper gems".
+  * debian/tests/control: run specs against installed package.
 
  -- Antonio Terceiro <terceiro@debian.org>  Thu, 02 Oct 2014 11:24:35 -0300
 
