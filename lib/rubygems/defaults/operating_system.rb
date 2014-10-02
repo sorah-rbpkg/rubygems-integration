@@ -22,8 +22,12 @@ class << Gem
       extra_path = File.join('/usr/share/rubygems-integration', '2.1')
     end
 
+    arch = Gem::ConfigMap[:arch]
+    api_version = Gem::ConfigMap[:ruby_version]
+
     upstream_default_path + [
-      File.join('/usr/share/rubygems-integration', Gem::ConfigMap[:ruby_version]),
+      "/usr/lib/#{arch}/rubygems-integration/#{api_version}",
+      File.join('/usr/share/rubygems-integration', api_version),
       extra_path,
       '/usr/share/rubygems-integration/all'
     ].compact
