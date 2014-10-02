@@ -4,7 +4,7 @@ require 'rbconfig'
 require 'rubygems/defaults/operating_system'
 
 $RUBY_VERSION = RbConfig::CONFIG['ruby_version']
-$ARCH = `dpkg-architecture -qDEB_HOST_MULTIARCH`.strip
+$ARCH = RbConfig::CONFIG['arch']
 
 class RubygemsIntegrationSpec < MiniTest::Spec
   it 'puts gems in /var/lib/gems/VERSION by default' do
