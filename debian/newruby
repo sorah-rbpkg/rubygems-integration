@@ -1,0 +1,25 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]; then
+  echo "usage: $0 VERSION"
+  exit 1
+fi
+
+new_version="$1"
+
+if ! grep -q "ruby$new_version" ruby_debian_dev.rb; then
+  echo "Please add an entry for Ruby $new_version to ruby_debian_dev.rb"
+  exit 2
+fi
+
+old_version=$(dpkg-parsechangelog -SVersion | cut -d : -f 2 | cut -d . -f 1-2)
+
+files_to_change=$(grep -rl "$old_version" debian/ | grep -v 'changelog\|NEWS')
+
+if [ -n "$files_to_change" ]; then
+  sed -i -e "s/${old_version}/${new_version}/g" $files_to_change
+else
+  echo "No files to change!"
+fi
+
+dch --newversion "1:${new_version}+debian1" "Make Ruby ${new_version} the default"
