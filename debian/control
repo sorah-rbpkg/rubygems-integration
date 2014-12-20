@@ -8,7 +8,7 @@ Uploaders:
  Lucas Nussbaum <lucas@lucas-nussbaum.net>,
  Christian Hofstaedtler <zeha@debian.org>,
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://www.ruby-lang.org/
 Vcs-Git: git://anonscm.debian.org/collab-maint/ruby-defaults.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/ruby-defaults.git
