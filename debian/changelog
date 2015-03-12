@@ -1,3 +1,10 @@
+ruby-defaults (1:2.1.5) unstable; urgency=medium
+
+  * ruby: add `Conflicts: ruby-activesupport-3.2` to help with several
+    Rails-related upgrade issues (Closes: #779882)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 12 Mar 2015 19:45:07 -0300
+
 ruby-defaults (1:2.1.0.4) unstable; urgency=medium
 
   * move wheezy2jessie upgrade tests to their own control file
