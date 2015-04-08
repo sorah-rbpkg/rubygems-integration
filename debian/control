@@ -5,7 +5,6 @@ Maintainer: Antonio Terceiro <terceiro@debian.org>
 Uploaders:
  akira yamada <akira@debian.org>,
  Daigo Moriwaki <daigo@debian.org>,
- Lucas Nussbaum <lucas@lucas-nussbaum.net>,
  Christian Hofstaedtler <zeha@debian.org>,
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.6
