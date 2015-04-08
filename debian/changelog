@@ -1,10 +1,10 @@
-ruby-defaults (1:2.1.5+1) UNRELEASED; urgency=medium
+ruby-defaults (1:2.1.5+1) experimental; urgency=medium
 
   * Add support for Ruby 2.2 (not the default yet)
   * debian/ruby-all-dev-depends: automatically generate dependencies for
     ruby-all-dev based on the contents of ruby_debian_dev.rb
 
- -- Antonio Terceiro <terceiro@debian.org>  Fri, 19 Dec 2014 17:12:53 -0200
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 08 Apr 2015 10:28:22 +0200
 
 ruby-defaults (1:2.1.5) unstable; urgency=medium
 
