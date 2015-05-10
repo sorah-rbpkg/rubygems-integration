@@ -1,3 +1,11 @@
+ruby-defaults (1:2.1.5+deb8u1) jessie; urgency=medium
+
+  * ruby: add `Conflicts: ruby-activesupport-2.3` to help with several
+    Rails-related upgrade issues, e.g. when upgrading redmine from wheezy
+    (Closes: #784336).
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 10 May 2015 18:54:20 -0300
+
 ruby-defaults (1:2.1.5) unstable; urgency=medium
 
   * ruby: add `Conflicts: ruby-activesupport-3.2` to help with several
