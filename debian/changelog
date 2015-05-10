@@ -7,6 +7,10 @@ ruby-defaults (1:2.1.5+2) UNRELEASED; urgency=medium
   * ruby Conflicts: ruby-activesupport-2.3 to help with several Rails-related
     upgrade issues, when using Rails 2.3 (with e.g. redmine from wheezy). See
     #779882
+  * Cleanup Uploaders: remove akira yamada <akira@debian.org> and Daigo
+    Moriwaki <daigo@debian.org>. We are grateful to their previous
+    maintainance of ruby in Debian, but in practive they haven't done anything
+    in quite a few years.
 
  -- Antonio Terceiro <terceiro@debian.org>  Sun, 10 May 2015 18:48:19 -0300
 
