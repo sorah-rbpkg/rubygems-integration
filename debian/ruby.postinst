@@ -5,7 +5,7 @@ set -e
 update-alternatives --remove-all ruby 2>/dev/null || true
 update-alternatives --remove-all gem 2>/dev/null || true
 
-version=2.1
+version=2.2
 
 # restore the default version overwriting any change made by
 # update-alternatives
