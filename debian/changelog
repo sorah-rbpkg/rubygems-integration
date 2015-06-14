@@ -1,6 +1,7 @@
 ruby-defaults (1:2.2) UNRELEASED; urgency=medium
 
   * Make Ruby 2.2 the default
+  * Drop support for Ruby 2.1
 
  -- Antonio Terceiro <terceiro@debian.org>  Sun, 14 Jun 2015 17:54:32 -0300
 
