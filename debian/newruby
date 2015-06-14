@@ -22,4 +22,4 @@ else
   echo "No files to change!"
 fi
 
-dch --newversion "1:${new_version}+debian1" "Make Ruby ${new_version} the default"
+dch --newversion "1:${new_version}" "Make Ruby ${new_version} the default"
