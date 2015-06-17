@@ -20,6 +20,8 @@ class << Gem
     extra_path = nil
     if RbConfig::CONFIG['ruby_version'] == '2.1.0'
       extra_path = File.join('/usr/share/rubygems-integration', '2.1')
+    elsif RbConfig::CONFIG['ruby_version'] == '2.2.0'
+      extra_path = File.join('/usr/share/rubygems-integration', '2.2')
     end
 
     arch = Gem::ConfigMap[:arch]
