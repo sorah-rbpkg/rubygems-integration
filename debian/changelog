@@ -1,15 +1,15 @@
-rubygems-integration (1.9) UNRELEASED; urgency=medium
+rubygems-integration (1.9) unstable; urgency=medium
 
   * Include /usr/lib/$(triplet)/rubygems-integration/$(api_version) in the
-    Rubygems path. This will be used to support Debian packages that install
-    as "proper gems".
+    Rubygems path. This might be used in the future to make Ruby packages
+    support multiarch.
   * debian/tests/control: run specs against installed package.
   * Add workaround for Ruby 2.2 because gem2deb < 0.18.2 installed
     gemspecs to directories named after the short Ruby version (2.2) instead
     of the API_VERSION (2.2.0). There was already a similar workaround for
     Ruby 2.1, so this should have been fixed a long time ago.
 
- -- Antonio Terceiro <terceiro@debian.org>  Thu, 02 Oct 2014 11:24:35 -0300
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 17 Jun 2015 19:13:10 -0300
 
 rubygems-integration (1.8) unstable; urgency=medium
 
