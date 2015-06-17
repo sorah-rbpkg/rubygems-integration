@@ -4,7 +4,9 @@ SPECS = $(wildcard spec/*_spec.rb)
 all:
 	@echo Nothing to build!
 
-run-specs:
+.PHONY: spec
+
+spec:
 	$(RUBY) -Ilib $(SPECS)
 
 install:
