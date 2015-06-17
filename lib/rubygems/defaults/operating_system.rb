@@ -17,6 +17,8 @@ class << Gem
 
   alias :upstream_default_path :default_path
   def default_path
+
+    # FIXME remove (part of) this after we get rid of ruby 2.1 and 2.2
     extra_path = nil
     if RbConfig::CONFIG['ruby_version'] == '2.1.0'
       extra_path = File.join('/usr/share/rubygems-integration', '2.1')
