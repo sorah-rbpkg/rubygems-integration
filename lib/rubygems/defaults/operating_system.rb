@@ -39,8 +39,8 @@ class << Gem
 
 end
 
-if RUBY_VERSION >= '2.0' then
-  class << Gem::Specification
+if RUBY_VERSION >= '2.1' then
+  class << Gem::BasicSpecification
 
     alias :upstream_default_specifications_dir :default_specifications_dir
     def default_specifications_dir

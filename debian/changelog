@@ -1,3 +1,11 @@
+rubygems-integration (1.10) UNRELEASED; urgency=medium
+
+  * Fix overlay incompatibility starting with Ruby 2.1.
+    Thanks to Gustavo Machado Campagnani Gama <nsn.igenesis@gmail.com>
+    (Closes: #783972)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Sun, 28 Jun 2015 22:17:30 +0200
+
 rubygems-integration (1.9) unstable; urgency=medium
 
   * Include /usr/lib/$(triplet)/rubygems-integration/$(api_version) in the
