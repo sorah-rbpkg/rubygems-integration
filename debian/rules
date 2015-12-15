@@ -12,7 +12,6 @@ export DEBIAN_RUBY_PROGRAMS = \
   irb \
   rdoc \
   ri \
-  testrb \
   ruby
 
 %:

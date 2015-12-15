@@ -9,7 +9,7 @@ version=2.2
 
 # restore the default version overwriting any change made by
 # update-alternatives
-for program in erb gem irb rdoc ri testrb ruby; do
+for program in erb gem irb rdoc ri ruby; do
   target=$(readlink -f /usr/bin/$program)
   if [ ! -e /usr/bin/$program -o "$target" = /usr/bin/${program}1.8 -o "$target" = /usr/bin/${program}1.9.1 ]
   then
