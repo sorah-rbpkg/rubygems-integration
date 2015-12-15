@@ -1,3 +1,9 @@
+ruby-defaults (1:2.3~0) UNRELEASED; urgency=medium
+
+  * Add support for building against Ruby 2.3
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 15 Dec 2015 21:23:23 -0200
+
 ruby-defaults (1:2.2.4) unstable; urgency=medium
 
   * Drop `testrb` program symlink; it's not provided anymore as of Ruby 2.2.
