@@ -12,7 +12,7 @@ if ! grep -q "ruby$new_version" ruby_debian_dev.rb; then
   exit 2
 fi
 
-old_version=$(dpkg-parsechangelog -SVersion | cut -d : -f 2 | cut -d . -f 1-2)
+old_version=$(grep-dctrl -F Package -X ruby debian/control -n -s Depends | cut -d , -f 1 | sed -e s/ruby//)
 
 files_to_change=$(grep -rl "$old_version" debian/ | grep -v 'changelog\|NEWS')
 
