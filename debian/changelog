@@ -1,3 +1,10 @@
+ruby-defaults (1:2.1.5+deb8u2) jessie; urgency=medium
+
+  * ruby: make the conflict on ruby-activesupport-2.3 versioned on (<< 2:4) to
+    allow transitional package to be installed (Closes: #798712)
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 28 Jan 2016 11:28:36 -0200
+
 ruby-defaults (1:2.1.5+deb8u1) jessie; urgency=medium
 
   * ruby: add `Conflicts: ruby-activesupport-2.3` to help with several
