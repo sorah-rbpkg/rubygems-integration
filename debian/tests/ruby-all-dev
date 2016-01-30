@@ -1,0 +1,14 @@
+#!/usr/bin/ruby
+
+ARGV.push('-v')
+require 'ruby_debian_dev'
+require "minitest/autorun"
+
+describe RubyDebianDev do
+  RubyDebianDev::RUBY_INTERPRETERS.each do |ruby, data|
+    it "installs #{data[:binary]}" do
+      File.executable?(data[:binary]).must_equal true
+    end
+  end
+end
+

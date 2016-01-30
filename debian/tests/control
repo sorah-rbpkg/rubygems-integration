@@ -1,3 +1,7 @@
 Tests: smoke-test
 Depends: ruby
 Restrictions: allow-stderr
+
+Tests: ruby-all-dev
+Depends: ruby, ruby-all-dev
+Restrictions: allow-stderr
