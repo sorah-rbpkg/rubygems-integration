@@ -1,4 +1,4 @@
-ruby-defaults (1:2.3~0) UNRELEASED; urgency=medium
+ruby-defaults (1:2.3~0) experimental; urgency=medium
 
   * Add support for building against Ruby 2.3
   * debian/newruby: read current Ruby version from `Depends:` field of package
@@ -6,7 +6,7 @@ ruby-defaults (1:2.3~0) UNRELEASED; urgency=medium
   * Add debian/tests/ruby-all-dev as a sanity test to make sure the
     dependencies on multiple interpreters are satisfied.
 
- -- Antonio Terceiro <terceiro@debian.org>  Tue, 15 Dec 2015 21:23:23 -0200
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 30 Jan 2016 15:49:49 -0200
 
 ruby-defaults (1:2.2.4) unstable; urgency=medium
 
