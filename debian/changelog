@@ -5,6 +5,7 @@ ruby-defaults (1:2.3~0) experimental; urgency=medium
     `ruby`.
   * Add debian/tests/ruby-all-dev as a sanity test to make sure the
     dependencies on multiple interpreters are satisfied.
+  * debian/control: switch Vcs-* to use https://
 
  -- Antonio Terceiro <terceiro@debian.org>  Sat, 30 Jan 2016 15:49:49 -0200
 
