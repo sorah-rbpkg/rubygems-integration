@@ -18,7 +18,7 @@ Specifically:
                 do not need it.
 
                 When building Debian packages, it is OK to only build for the
-                default version, and using just `ruby` (instead of harcoding
+                default version, and using just `ruby` (instead of hardcoding
                 the current default) will do that in a future-proof way.
 
 To programatically list all the supported versions, install the `gem2deb`
