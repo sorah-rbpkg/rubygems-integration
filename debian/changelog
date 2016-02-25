@@ -1,6 +1,7 @@
 ruby-defaults (1:2.3~1) unstable; urgency=medium
 
   * Upload to unstable, enabling builds against ruby2.3
+  * debian/control: Bump Standards-Version to 3.9.7; no changes needed.
 
  -- Antonio Terceiro <terceiro@debian.org>  Thu, 25 Feb 2016 20:26:49 -0300
 
