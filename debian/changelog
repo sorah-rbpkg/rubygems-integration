@@ -1,3 +1,9 @@
+ruby-defaults (1:2.3~1) unstable; urgency=medium
+
+  * Upload to unstable, enabling builds against ruby2.3
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 25 Feb 2016 20:26:49 -0300
+
 ruby-defaults (1:2.3~0) experimental; urgency=medium
 
   * Add support for building against Ruby 2.3
