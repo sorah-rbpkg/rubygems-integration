@@ -23,3 +23,10 @@ debian/ruby.postinst: debian/ruby.postinst.in
 override_dh_gencontrol:
 	./debian/ruby-all-dev-depends >> debian/ruby-all-dev.substvars
 	dh_gencontrol
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+override_dh_auto_install-arch:
+	dh_auto_install
+	dh_link /usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/ruby-$(DEBIAN_DEFAULT_RUBY_VERSION).pc \
+		/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/ruby.pc

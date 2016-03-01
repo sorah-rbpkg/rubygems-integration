@@ -5,3 +5,5 @@ Restrictions: allow-stderr
 Tests: ruby-all-dev
 Depends: ruby, ruby-all-dev
 Restrictions: allow-stderr
+
+Test-Command: pkg-config --cflags --libs ruby

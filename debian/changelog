@@ -1,3 +1,14 @@
+ruby-defaults (1:2.3.0) unstable; urgency=medium
+
+  * ruby-dev: provide a symlink from ruby-X.Y.pc to ruby.pc so that pkg-config
+    can refer to the unversioned `ruby` package.
+    - becomes `Architecture: any`, because the target ruby-X.Y.pc is
+      in an architecture-dependent location.
+    - becomes `Multi-Arch: same` so ruby-dev can eventually be used to
+      cross-compile for the current default Ruby version.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 01 Mar 2016 09:30:17 -0300
+
 ruby-defaults (1:2.3) experimental; urgency=medium
 
   * Make Ruby 2.3 the default
