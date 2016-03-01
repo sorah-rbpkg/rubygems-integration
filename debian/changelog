@@ -1,4 +1,4 @@
-ruby-defaults (1:2.3.0) unstable; urgency=medium
+ruby-defaults (1:2.3.0) experimental; urgency=medium
 
   * ruby-dev: provide a symlink from ruby-X.Y.pc to ruby.pc so that pkg-config
     can refer to the unversioned `ruby` package.
