@@ -1,3 +1,12 @@
+ruby-defaults (1:2.3.0+1) unstable; urgency=medium
+
+  * Transition unstable to ruby2.3
+    - ruby2.3 is now the default ruby. This is the version that will ship with
+      stretch.
+    - Drop support for building against ruby2.2
+
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 02 Mar 2016 13:58:34 -0300
+
 ruby-defaults (1:2.3.0) experimental; urgency=medium
 
   * ruby-dev: provide a symlink from ruby-X.Y.pc to ruby.pc so that pkg-config
