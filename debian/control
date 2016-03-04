@@ -2,7 +2,8 @@ Source: rubygems-integration
 Section: ruby
 Priority: optional
 Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
-Uploaders: Antonio Terceiro <terceiro@debian.org>, Christian Hofstaedtler <zeha@debian.org>
+Uploaders: Antonio Terceiro <terceiro@debian.org>,
+           Christian Hofstaedtler <zeha@debian.org>
 Build-Depends: debhelper (>= 9~)
 Standards-Version: 3.9.7
 Vcs-Git: https://anonscm.debian.org/git/pkg-ruby-extras/rubygems-integration.git
@@ -11,7 +12,9 @@ Testsuite: autopkgtest
 
 Package: rubygems-integration
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, ca-certificates
+Depends: ca-certificates,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Suggests: bundler
 Multi-Arch: foreign
 Description: integration of Debian Ruby packages with Rubygems
