@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dependencies=$(sed -n -e "s/\s*has_support_for\s*'\(.*\)'.*/\1, \1-dev,/ p" ruby_debian_dev.rb)
+dependencies=$(sed -n -e "s/\s*has_support_for\s*'\(.*\)'.*/\1:any, \1-dev,/ p" ruby_debian_dev.rb)
 
 printf 'ruby-all-dev:Depends='
 for d in $dependencies; do

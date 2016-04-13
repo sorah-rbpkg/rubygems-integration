@@ -51,7 +51,7 @@ Description: Header files for compiling extension modules for Ruby (default vers
 
 Package: ruby-all-dev
 Section: devel
-Architecture: all
+Architecture: any
 Depends: ${ruby-all-dev:Depends}, ${misc:Depends}
 Description: Ruby development environment (all versions supported in Debian)
  Ruby is the interpreted scripting language for quick and easy
