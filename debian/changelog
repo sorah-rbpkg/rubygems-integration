@@ -1,3 +1,11 @@
+ruby-defaults (1:2.3.0+3) unstable; urgency=medium
+
+  * Turn `ruby` package into an `Architecture: any` package, too,
+    to ease Multi-Arch interpreter issues. Also add missing Multi-Arch
+    annotation to ruby-all-dev. Thanks to Helmut Grohne <helmutg@debian.org>.
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Wed, 13 Apr 2016 18:58:32 +0000
+
 ruby-defaults (1:2.3.0+2) unstable; urgency=medium
 
   * Add workaround for Multi-Arch interpreter problem.
