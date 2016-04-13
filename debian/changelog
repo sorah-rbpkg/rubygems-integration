@@ -1,3 +1,14 @@
+ruby-defaults (1:2.3.0+2) unstable; urgency=medium
+
+  * Add workaround for Multi-Arch interpreter problem.
+    Change ruby-all-dev to be an arch native package, so it can be
+    used in Build-Depends without losing Architecture information,
+    and have it depend on rubyN.M:any so the default ruby can still
+    be used to run ruby.
+    Thanks to Helmut Grohne <helmutg@debian.org>.
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Wed, 13 Apr 2016 14:07:21 +0000
+
 ruby-defaults (1:2.3.0+1) unstable; urgency=medium
 
   * Transition unstable to ruby2.3
