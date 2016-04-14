@@ -1,3 +1,9 @@
+ruby-defaults (1:2.3.0+4) unstable; urgency=medium
+
+  * Install ruby.pc symlink only in ruby-dev. (Closes: #820962)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Thu, 14 Apr 2016 07:11:22 +0000
+
 ruby-defaults (1:2.3.0+3) unstable; urgency=medium
 
   * Turn `ruby` package into an `Architecture: any` package, too,
