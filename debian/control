@@ -1,13 +1,12 @@
 Source: rubygems-integration
 Section: ruby
 Priority: optional
-Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
-Uploaders: Antonio Terceiro <terceiro@debian.org>,
-           Christian Hofstaedtler <zeha@debian.org>
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>,
+            Sorah Fukumori <her@sorah.jp>
 Build-Depends: debhelper (>= 9~)
 Standards-Version: 3.9.7
-Vcs-Git: https://anonscm.debian.org/git/pkg-ruby-extras/rubygems-integration.git
-Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/rubygems-integration.git
+Vcs-Git: https://github.com/sorah-rbpkg/rubygems-integration.git
+Vcs-Browser: https://github.com/sorah-rbpkg/rubygems-integration
 Testsuite: autopkgtest
 
 Package: rubygems-integration

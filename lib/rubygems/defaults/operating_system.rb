@@ -26,14 +26,23 @@ class << Gem
       extra_path = File.join('/usr/share/rubygems-integration', '2.2')
     end
 
+    extra_paths_a = [extra_path].compact
+    extra_paths_b = []
+
+    if RbConfig::CONFIG['ruby_version'] >= '2.3.0'
+      # bundled gems
+      extra_paths_b << upstream_default_dir
+    end
+
     arch = Gem::ConfigMap[:arch]
     api_version = Gem::ConfigMap[:ruby_version]
 
     upstream_default_path + [
       "/usr/lib/#{arch}/rubygems-integration/#{api_version}",
       File.join('/usr/share/rubygems-integration', api_version),
-      extra_path,
-      '/usr/share/rubygems-integration/all'
+      *extra_paths_a,
+      '/usr/share/rubygems-integration/all',
+      *extra_paths_b,
     ].compact
   end
 
