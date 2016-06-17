@@ -1,4 +1,4 @@
-rubygems-integration (1.10nkmi1) unstable; urgency=medium
+rubygems-integration (1.10nkmi1~trusty) trusty; urgency=medium
 
   * Initial release from me!
   * sorah-rbpkg's ruby has ruby*-gems that contains bundled gems. Let look
