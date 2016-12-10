@@ -21,6 +21,6 @@ Specifically:
                 default version, and using just `ruby` (instead of hardcoding
                 the current default) will do that in a future-proof way.
 
-To programatically list all the supported versions, install the `gem2deb`
+To programmatically list all the supported versions, install the `gem2deb`
 package and run `dh_ruby --print-supported`. To determine which is the default
 version, just dereference the /usr/bin/ruby symbolic link.

@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Antonio Terceiro <terceiro@debian.org>
 Uploaders: Christian Hofstaedtler <zeha@debian.org>
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Homepage: http://www.ruby-lang.org/
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/ruby-defaults.git
 Vcs-Browser: https://anonscm.debian.org/git/collab-maint/ruby-defaults.git
@@ -66,7 +66,7 @@ Description: Ruby development environment (all versions supported in Debian)
  (the default one), but during transitions multiple versions might be
  supported.
  .
- To programatically list all the supported versions, install the `gem2deb`
+ To programmatically list all the supported versions, install the `gem2deb`
  package and run `dh_ruby --print-supported`. To determine which is the default
  version, just dereference the /usr/bin/ruby symbolic link.
  .

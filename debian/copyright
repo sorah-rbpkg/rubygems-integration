@@ -6,7 +6,7 @@ Copyright: Copyright 2003 Fumitoshi UKAI <ukai@debian.or.jp>
 	Fumitoshi UKAI <ukai@debian.or.jp>
 	akira yamada <akira@debian.org>
 	Akira TAGOH <tagoh@debian.org>
-License: Ruby
+License: RubyLicense
  Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.co.jp>.
  You can redistribute it and/or modify it under either the terms of the GPL
  (see COPYING file), or the conditions below:
