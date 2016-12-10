@@ -88,7 +88,8 @@ Description: Libraries necessary to run Ruby
  This package is a dependency package, which depends on Debian's default Ruby
  version (currently v2.3).
 
-Package: libtcltk-ruby
+Package: ruby-tcltk
+Provides: libtcltk-ruby
 Architecture: all
 Depends: ruby2.3-tcltk, ${misc:Depends}
 Description: Tcl/Tk interface for Ruby
@@ -117,7 +118,7 @@ Description: Ruby Interactive reference
 
 Package: ruby-full
 Architecture: all
-Depends: ruby, ruby-dev, libtcltk-ruby, ri, ${misc:Depends}
+Depends: ruby, ruby-dev, ruby-tcltk, ri, ${misc:Depends}
 Description: Ruby full installation (default version)
  For many good reasons, the Ruby programming language is split in many
  small different packages. Installing this package will make sure you have
