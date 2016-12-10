@@ -1,4 +1,4 @@
-ruby-defaults (1:2.3.0+4) unstable; urgency=medium
+ruby-defaults (1:2.3.3) unstable; urgency=medium
 
   * Rename libtcltk-ruby to ruby-tcltk to be consistent with other ruby
     packages. Keep Provides: libtcltk-ruby for now.
