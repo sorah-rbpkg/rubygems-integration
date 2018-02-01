@@ -5,6 +5,7 @@ ruby-defaults (1:2.5~1) unstable; urgency=medium
   * Drop unnecessary Testsuite: header
   * Drop triggers used to help upgrades in the ruby1.8/ruby1.9.1 era; those
     versions are now only in oldoldstable.
+  * Specify section `ruby` for ruby-dev and ruby-all-dev
 
  -- Antonio Terceiro <terceiro@debian.org>  Thu, 01 Feb 2018 08:31:00 -0200
 
