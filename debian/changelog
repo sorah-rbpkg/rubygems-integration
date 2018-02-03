@@ -1,3 +1,9 @@
+ruby-defaults (1:2.5~1000grau) experimental; urgency=medium
+
+  * Make Ruby 2.5 the default
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 03 Feb 2018 17:00:40 -0200
+
 ruby-defaults (1:2.5~1) unstable; urgency=medium
 
   * Upload to unstable
