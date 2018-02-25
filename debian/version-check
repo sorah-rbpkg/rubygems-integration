@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -eu
+
+package_version="$1"
+default_ruby_version="$2"
+
+case "$package_version" in
+  [0-9]:$default_ruby_version*)
+    : ok
+    ;;
+  *)
+    echo "E: Inconsistent package version number: $package_version"
+    echo "E: Default Ruby version: $default_ruby_version"
+    exit 1;
+    ;;
+esac
