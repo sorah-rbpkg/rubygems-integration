@@ -15,5 +15,10 @@ describe RubyDebianDev do
       v.must_match %r{^ruby \(>= .+\)$}
     end
   end
+
+  it 'provides a Ruby upper bound' do
+    ruby_upper_bound = RubyDebianDev.ruby_upper_bound
+    ruby_upper_bound.must_match %r{^ruby \(<< .+\)}
+  end
 end
 

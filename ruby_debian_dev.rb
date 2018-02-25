@@ -13,6 +13,7 @@ module RubyDebianDev
       api_version:         '2.3.0',
       shared_library:      'libruby2.3',
       min_ruby_version:    '1:2.3~0',
+      ruby_upper_bound:    '1:2.4~',
     }
   end
 
@@ -23,6 +24,7 @@ module RubyDebianDev
       api_version:         '2.5.0',
       shared_library:      'libruby2.5',
       min_ruby_version:    '1:2.5~0',
+      ruby_upper_bound:    '1:2.6~',
     }
   end
 
@@ -33,6 +35,16 @@ module RubyDebianDev
       end
     end
     return nil
+  end
+
+  def self.ruby_upper_bound
+    sort = IO.popen('sort -V', 'w+')
+    RUBY_INTERPRETERS.values.map do |data|
+      sort.puts(data[:ruby_upper_bound])
+    end
+    sort.close_write()
+    version = sort.read.split.last
+    "ruby (<< #{version})"
   end
 
   #################################################################
