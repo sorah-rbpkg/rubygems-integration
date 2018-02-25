@@ -1,4 +1,4 @@
-ruby-defaults (1:2.5~1024) UNRELEASED; urgency=medium
+ruby-defaults (1:2.5) UNRELEASED; urgency=medium
 
   * debian/rules: call debian/version-check before configure to ensure
     consistent versions numbers, i.e. If Ruby X.Y is the default, then the
