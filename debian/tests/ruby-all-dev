@@ -9,6 +9,11 @@ describe RubyDebianDev do
     it "installs #{data[:binary]}" do
       File.executable?(data[:binary]).must_equal true
     end
+
+    it "has an associated minimum version of #{ruby}" do
+      v = RubyDebianDev.min_ruby_dependency_for("lib#{ruby}")
+      v.must_match %r{^ruby \(>= .+\)$}
+    end
   end
 end
 

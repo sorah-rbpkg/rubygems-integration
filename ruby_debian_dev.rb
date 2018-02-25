@@ -12,7 +12,7 @@ module RubyDebianDev
       binary:              '/usr/bin/ruby2.3',
       api_version:         '2.3.0',
       shared_library:      'libruby2.3',
-      min_ruby_dependency: 'ruby (>= 1:2.3~0)',
+      min_ruby_version:    '1:2.3~0',
     }
   end
 
@@ -22,14 +22,14 @@ module RubyDebianDev
       binary:              '/usr/bin/ruby2.5',
       api_version:         '2.5.0',
       shared_library:      'libruby2.5',
-      min_ruby_dependency: 'ruby (>= 1:2.5~0)',
+      min_ruby_version:    '1:2.5~0',
     }
   end
 
   def self.min_ruby_dependency_for(shared_library)
     RUBY_INTERPRETERS.each do |int,data|
       if data[:shared_library] == shared_library
-        return data[:min_ruby_dependency]
+        return "ruby (>= %s)" % data[:min_ruby_version]
       end
     end
     return nil
