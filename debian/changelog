@@ -1,3 +1,9 @@
+ruby-defaults (1:2.5.0) unstable; urgency=medium
+
+  * Really upload to unstable this time.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 04 Mar 2018 20:30:10 -0300
+
 ruby-defaults (1:2.5) experimental; urgency=medium
 
   * Switch to ruby2.5 in unstable
