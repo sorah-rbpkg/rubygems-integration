@@ -7,6 +7,8 @@ ruby-defaults (1:2.5) UNRELEASED; urgency=medium
     be used to prevent installation without a supported Ruby interpreter
     (Closes: #860747). Note that gem2deb also needs to be updated to be able
     to use this data.
+  * RubyDebianDev::SUPPORTED_RUBY_VERSIONS: make sure default Ruby always
+    comes first.
 
  -- Antonio Terceiro <terceiro@debian.org>  Sun, 25 Feb 2018 11:00:42 -0300
 

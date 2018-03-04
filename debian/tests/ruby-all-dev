@@ -20,5 +20,11 @@ describe RubyDebianDev do
     ruby_upper_bound = RubyDebianDev.ruby_upper_bound
     ruby_upper_bound.must_match %r{^ruby \(<< .+\)}
   end
+
+  it 'provides list of supported interpreters with default first' do
+    default = File.basename(File.readlink('/usr/bin/ruby'))
+    default.must_equal RubyDebianDev::SUPPORTED_RUBY_VERSIONS.keys.first
+  end
+
 end
 
