@@ -1,3 +1,9 @@
+ruby-defaults (1:2.5.1) unstable; urgency=medium
+
+  * Drop support for ruby2.3
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 22 Mar 2018 10:43:47 +0800
+
 ruby-defaults (1:2.5.0) unstable; urgency=medium
 
   * Really upload to unstable this time.
