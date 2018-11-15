@@ -1,3 +1,9 @@
+rubygems-integration (1.11nkmi1) unstable; urgency=medium
+
+  * Bump as the upstream updates
+
+ -- Sorah Fukumori <her@sorah.jp>  Thu, 15 Nov 2018 19:53:00 +0000
+
 rubygems-integration (1.10nkmi1) unstable; urgency=medium
 
   * Initial release from me!
