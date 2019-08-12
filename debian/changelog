@@ -1,3 +1,9 @@
+rubygems-integration (1.12) UNRELEASED; urgency=medium
+
+  * Add salsa-ci.yml
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Tue, 13 Aug 2019 05:12:16 +0530
+
 rubygems-integration (1.11) unstable; urgency=medium
 
   [ Cédric Boutillier ]
