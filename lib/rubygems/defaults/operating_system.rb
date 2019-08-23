@@ -21,11 +21,10 @@ class << Gem
     api_version = Gem::ConfigMap[:ruby_version]
 
     upstream_default_path + [
-      "/usr/lib/#{arch}/rubygems-integration/#{api_version}",
       File.join('/usr/share/rubygems-integration', api_version),
       '/usr/share/rubygems-integration/all',
       upstream_default_dir,
-      '/usr/share/rubygems-integration/all'
+      "/usr/lib/#{arch}/rubygems-integration/#{api_version}",
     ].compact
   end
 
