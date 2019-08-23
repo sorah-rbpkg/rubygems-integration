@@ -4,11 +4,12 @@ Priority: optional
 Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Uploaders: Antonio Terceiro <terceiro@debian.org>,
            Christian Hofstaedtler <zeha@debian.org>
-Build-Depends: debhelper (>= 10~)
-Standards-Version: 3.9.8
-Vcs-Git: https://anonscm.debian.org/git/pkg-ruby-extras/rubygems-integration.git
-Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/rubygems-integration.git
+Build-Depends: debhelper-compat (= 12),
+Standards-Version: 4.4.0
+Vcs-Git: https://salsa.debian.org/ruby-team/rubygems-integration.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/rubygems-integration
 Testsuite: autopkgtest
+Rules-Requires-Root: no
 
 Package: rubygems-integration
 Architecture: all
