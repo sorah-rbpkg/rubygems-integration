@@ -1,5 +1,10 @@
 Tests: package-list
-Depends: @, ruby, ruby-all-dev, ruby-ffi, ruby-magic
+Depends: ruby,
+         ruby-all-dev,
+         ruby-ffi,
+         ruby-magic,
+         @
 
 Test-Command: ruby spec/*_spec.rb
-Depends: @, ruby
+Depends: ruby,
+         @
