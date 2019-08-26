@@ -7,7 +7,6 @@ Build-Depends: debhelper-compat (= 12),
 Standards-Version: 4.4.0
 Vcs-Git: https://github.com/sorah-rbpkg/rubygems-integration.git
 Vcs-Browser: https://github.com/sorah-rbpkg/rubygems-integration
-Testsuite: autopkgtest
 Rules-Requires-Root: no
 
 Package: rubygems-integration
