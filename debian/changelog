@@ -1,3 +1,9 @@
+rubygems-integration (1.13) UNRELEASED; urgency=medium
+
+  * Use secure copyright file specification URI.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sat, 05 Oct 2019 09:20:49 +0000
+
 rubygems-integration (1.12) unstable; urgency=medium
 
   [ Utkarsh Gupta ]
