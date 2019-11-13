@@ -1,3 +1,12 @@
+rubygems-integration (1.14) unstable; urgency=medium
+
+  * Ensure /usr/lib/ruby/gems/$VERSION is in the gem path
+  * Adjust coding style with rubocop
+  * Update copyright years
+  * Proofead README.markdown
+
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 13 Nov 2019 19:11:58 -0300
+
 rubygems-integration (1.13) unstable; urgency=medium
 
   [ Debian Janitor ]
