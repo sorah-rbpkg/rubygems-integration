@@ -7,7 +7,7 @@ class << Gem
 
   alias :upstream_default_dir :default_dir
   def default_dir
-    File.join('/', 'var', 'lib', 'gems', Gem::ConfigMap[:ruby_version])
+    File.join('/', 'var', 'lib', 'gems', RbConfig::CONFIG["ruby_version"])
   end
 
   alias :upstream_default_bindir :default_bindir
@@ -18,8 +18,8 @@ class << Gem
   alias :upstream_default_path :default_path
   def default_path
 
-    arch = Gem::ConfigMap[:arch]
-    api_version = Gem::ConfigMap[:ruby_version]
+    arch = RbConfig::CONFIG["arch"]
+    api_version = RbConfig::CONFIG["ruby_version"]
 
     upstream_default_path + [
       File.join('/usr/share/rubygems-integration', api_version),
