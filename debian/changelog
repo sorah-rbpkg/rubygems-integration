@@ -5,6 +5,7 @@ rubygems-integration (1.13) unstable; urgency=medium
 
   [ Antonio Terceiro ]
   * Replace usage of Gem::ConfigMap with RbConfig::CONFIG
+  * Bump Standards-Version to 4.4.1; no changes needed otherwise
 
  -- Antonio Terceiro <terceiro@debian.org>  Wed, 13 Nov 2019 16:52:15 -0300
 
