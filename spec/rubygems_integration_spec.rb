@@ -11,6 +11,10 @@ class RubygemsIntegrationSpec < MiniTest::Spec
     Gem.default_dir.must_equal '/var/lib/gems/' + $RUBY_VERSION
   end
 
+  it 'does not remove /usr/lib/ruby/gems/VERSION from gem path' do
+    Gem.default_path.must_include "/usr/lib/ruby/gems/#{$RUBY_VERSION}"
+  end
+
   it 'puts programs in /usr/local/bin' do
     Gem.default_bindir.must_equal '/usr/local/bin'
   end

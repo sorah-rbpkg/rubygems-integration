@@ -8,3 +8,8 @@ Depends: ruby,
 Test-Command: ruby spec/*_spec.rb
 Depends: ruby,
          @
+
+Test-Command: gem list --installed stringio
+Features: test-name=default-gems
+Depends: ruby,
+         @
