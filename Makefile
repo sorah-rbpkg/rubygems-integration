@@ -15,8 +15,7 @@ install:
 
 uninstall:
 	$(RM) $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults/operating_system.rb
-	rmdir $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults || true
-	rmdir $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems || true
+	rmdir -p $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults
 
 clean:
 	@echo Nothing to clean
