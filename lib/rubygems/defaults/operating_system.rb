@@ -22,22 +22,24 @@ unless ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
       api_version = RbConfig::CONFIG["ruby_version"]
 
       upstream_default_path + [
+        "/usr/lib/ruby/gems/#{api_version}",
         File.join('/usr/share/rubygems-integration', api_version),
         '/usr/share/rubygems-integration/all',
         "/usr/lib/#{arch}/rubygems-integration/#{api_version}",
       ].compact
     end
 
+    def default_specifications_dir
+      File.join(Gem.upstream_default_dir, "specifications", "default")
+    end
   end
 
-  if RUBY_VERSION >= '2.1' then
+  if RUBY_VERSION >= '2.1' and RUBY_VERSION < '2.7' then
     class << Gem::BasicSpecification
-
       alias :upstream_default_specifications_dir :default_specifications_dir
       def default_specifications_dir
-        File.join(Gem.upstream_default_dir, "specifications", "default")
+        Gem.default_specifications_dir
       end
-
     end
   end
 
