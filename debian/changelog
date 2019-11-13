@@ -1,8 +1,12 @@
-rubygems-integration (1.13) UNRELEASED; urgency=medium
+rubygems-integration (1.13) unstable; urgency=medium
 
+  [ Debian Janitor ]
   * Use secure copyright file specification URI.
 
- -- Debian Janitor <janitor@jelmer.uk>  Sat, 05 Oct 2019 09:20:49 +0000
+  [ Antonio Terceiro ]
+  * Replace usage of Gem::ConfigMap with RbConfig::CONFIG
+
+ -- Antonio Terceiro <terceiro@debian.org>  Wed, 13 Nov 2019 16:52:15 -0300
 
 rubygems-integration (1.12) unstable; urgency=medium
 
