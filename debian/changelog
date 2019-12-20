@@ -1,3 +1,11 @@
+rubygems-integration (1.15) unstable; urgency=medium
+
+  * make uninstall: remove empty leftover directories
+  * ruby2.7+: silence warning about rubyforge_project= in gemspecs
+  * rubygems_integration_spec: fix warnings on newer minitest
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 20 Dec 2019 19:52:57 -0300
+
 rubygems-integration (1.14) unstable; urgency=medium
 
   * Ensure /usr/lib/ruby/gems/$VERSION is in the gem path
