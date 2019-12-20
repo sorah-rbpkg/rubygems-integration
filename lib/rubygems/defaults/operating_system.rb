@@ -42,4 +42,11 @@ unless ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
     end
   end
 
+  if RUBY_VERSION >= '2.7'
+    class Gem::Specification
+      def rubyforge_project=(x)
+      end
+    end
+  end
+
 end
