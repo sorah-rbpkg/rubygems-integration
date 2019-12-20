@@ -10,22 +10,24 @@ $ARCH = RbConfig::CONFIG['arch']
 
 class RubygemsIntegrationSpec < MiniTest::Spec
   it 'puts gems in /var/lib/gems/VERSION by default' do
-    Gem.default_dir.must_equal '/var/lib/gems/' + $RUBY_VERSION
+    _(Gem.default_dir).must_equal '/var/lib/gems/' + RUBY_VERSION
   end
 
   it 'does not remove /usr/lib/ruby/gems/VERSION from gem path' do
-    Gem.default_path.must_include "/usr/lib/ruby/gems/#{$RUBY_VERSION}"
+    _(Gem.default_path).must_include "/usr/lib/ruby/gems/#{RUBY_VERSION}"
   end
 
   it 'puts programs in /usr/local/bin' do
-    Gem.default_bindir.must_equal '/usr/local/bin'
+    _(Gem.default_bindir).must_equal '/usr/local/bin'
   end
 
   it 'includes /usr/share/rubygems-integration/VERSION in Gem.path' do
-    Gem.default_path.must_include '/usr/share/rubygems-integration/' + $RUBY_VERSION
+    path = Gem.default_path
+    _(path).must_include '/usr/share/rubygems-integration/' + RUBY_VERSION
   end
 
   it 'includes /usr/lib/ARCH/rubygems-integration/VERSION in Gem.path' do
-    Gem.default_path.must_include "/usr/lib/#{$ARCH}/rubygems-integration/#{$RUBY_VERSION}"
+    path = Gem.default_path
+    _(path).must_include "/usr/lib/#{ARCH}/rubygems-integration/#{RUBY_VERSION}"
   end
 end
