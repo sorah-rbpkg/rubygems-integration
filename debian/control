@@ -3,7 +3,8 @@ Section: ruby
 Priority: optional
 Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>,
             Sorah Fukumori <her@sorah.jp>
-Build-Depends: debhelper-compat (= 12),
+# FIXME: debhelper-compat
+Build-Depends: debhelper (>= 11~),
 Standards-Version: 4.4.1
 Vcs-Git: https://github.com/sorah-rbpkg/rubygems-integration.git
 Vcs-Browser: https://github.com/sorah-rbpkg/rubygems-integration
