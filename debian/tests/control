@@ -5,9 +5,9 @@ Depends: ruby,
          ruby-magic,
          @
 
-Test-Command: ruby spec/*_spec.rb
-Depends: ruby,
-         @
+Test-Command: make spec
+Depends: @, ruby, ruby-all-dev
+Features: test-name=spec
 
 Test-Command: gem list --installed stringio
 Features: test-name=default-gems
