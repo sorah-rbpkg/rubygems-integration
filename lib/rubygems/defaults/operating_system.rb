@@ -31,6 +31,9 @@ unless ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
       ].compact
     end
 
+    # This was not defined in ruby2.5, and is now defined again in ruby2.7;
+    # therefore the alias call must be conditional
+    alias :upstream_default_specifications_dir :default_specifications_dir if RUBY_VERSION >= '2.7'
     def default_specifications_dir
       File.join(Gem.upstream_default_dir, 'specifications', 'default')
     end
@@ -47,6 +50,7 @@ unless ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
 
   if RUBY_VERSION >= '2.7'
     class Gem::Specification
+      alias :upstream_rubyforge_project= :rubyforge_project=
       def rubyforge_project=(x)
       end
     end
