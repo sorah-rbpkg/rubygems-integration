@@ -1,3 +1,12 @@
+rubygems-integration (1.16) unstable; urgency=medium
+
+  * Avoid warnings about overridden methods on ruby2.7
+  * Run specs against all available ruby interpreters
+  * Run spec with warnings turned on
+  * Bump Standards-Version to 4.5.0; no changes needed
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 06 Feb 2020 12:43:07 +0100
+
 rubygems-integration (1.15) unstable; urgency=medium
 
   * make uninstall: remove empty leftover directories
