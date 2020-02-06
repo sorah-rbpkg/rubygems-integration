@@ -11,7 +11,7 @@ spec: $(SPEC_ON_ALL_RUBIES)
 	@echo $(SPEC_ON_ALL_RUBIES)
 
 $(SPEC_ON_ALL_RUBIES): spec-%:
-	$* -Ilib $(SPECS)
+	$* -w -Ilib $(SPECS)
 
 install:
 	install -m 755 -d $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults
