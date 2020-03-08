@@ -1,6 +1,8 @@
 rubygems-integration (1.11+deb10u1) buster; urgency=medium
 
   * Replace usage of Gem::ConfigMap with RbConfig::CONFIG
+    This avoid deprecation warnings when users install a newer version of
+    Rubygems via `gem update --system`.
 
  -- Antonio Terceiro <terceiro@debian.org>  Tue, 04 Feb 2020 14:11:57 +0100
 
