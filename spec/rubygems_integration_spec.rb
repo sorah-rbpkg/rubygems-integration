@@ -1,10 +1,6 @@
-require 'rubygems'
 require 'minitest/autorun'
-require 'rbconfig'
-require 'rubygems/defaults/operating_system'
 
 class RubygemsIntegrationSpec < MiniTest::Spec
-  RUBY_VERSION = RbConfig::CONFIG['ruby_version']
   ARCH = RbConfig::CONFIG['arch']
 
   it 'puts gems in /var/lib/gems/VERSION by default' do
