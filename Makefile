@@ -1,6 +1,8 @@
 RUBIES = $(shell ruby -rruby_debian_dev -e "puts RubyDebianDev::SUPPORTED_RUBY_VERSIONS.keys.join(' ')")
 SPEC_ON_ALL_RUBIES = $(patsubst %, spec-%, $(RUBIES))
-SPECS = $(wildcard spec/*_spec.rb)
+ifeq (,$(AUTOPKGTEST_TMP))
+	LIB := -Ilib
+endif
 
 all:
 	@echo Nothing to build!
@@ -11,7 +13,7 @@ spec: $(SPEC_ON_ALL_RUBIES)
 	@echo $(SPEC_ON_ALL_RUBIES)
 
 $(SPEC_ON_ALL_RUBIES): spec-%:
-	$* -w -Ilib $(SPECS)
+	$* -w $(LIB) $(SPECS)
 
 install:
 	install -m 755 -d $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults
