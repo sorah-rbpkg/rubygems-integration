@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
+class << Gem
+  OPERATING_SYSTEM_DEFAULTS = {
+    ssl_ca_cert: '/etc/ssl/certs/ca-certificates.crt'
+  }.freeze
+end
+
 unless ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
-
   class << Gem
-    OPERATING_SYSTEM_DEFAULTS = {
-      ssl_ca_cert: '/etc/ssl/certs/ca-certificates.crt'
-    }.freeze
-
     alias upstream_default_dir default_dir
     def default_dir
       File.join('/', 'var', 'lib', 'gems', RbConfig::CONFIG['ruby_version'])
