@@ -16,6 +16,7 @@ Depends: ca-certificates,
          ${misc:Depends},
          ${shlibs:Depends}
 Suggests: bundler
+Breaks: ruby2.5
 Multi-Arch: foreign
 Description: integration of Debian Ruby packages with Rubygems
  rubygems-integration makes Debian Ruby packages recognizable by Rubygems.
