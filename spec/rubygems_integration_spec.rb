@@ -1,14 +1,11 @@
 # frozen_string_literal: true
 
-require 'rubygems'
 require 'minitest/autorun'
-require 'rbconfig'
-require 'rubygems/defaults/operating_system'
-
-$RUBY_VERSION = RbConfig::CONFIG['ruby_version']
-$ARCH = RbConfig::CONFIG['arch']
 
 class RubygemsIntegrationSpec < MiniTest::Spec
+  RUBY_VERSION = RbConfig::CONFIG['ruby_version']
+  ARCH = RbConfig::CONFIG['arch']
+
   it 'puts gems in /var/lib/gems/VERSION by default' do
     _(Gem.default_dir).must_equal '/var/lib/gems/' + RUBY_VERSION
   end
