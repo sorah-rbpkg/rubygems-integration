@@ -42,7 +42,7 @@ class RubyStandaloneSpec
     @tests.shuffle.each do |t|
       name, block = t
       begin
-        block.call
+        self.new.instance_eval(&block)
         print '.'
       rescue FailedAssertion => e
         failure = Failure.new(name)
@@ -77,12 +77,12 @@ class RubyStandaloneSpec
     failures.empty? ? 0 : 1
   end
 
-  def self.eq(a, b)
+  def eq(a, b)
     raise FailedAssertion.new("expected #{a.inspect} == #{b.inspect}") unless a == b
     true
   end
 
-  def self.nm(a, b)
+  def nm(a, b)
     raise FailedAssertion.new("expected #{a.inspect} to not match #{b.inspect}") if a =~ b
     true
   end
