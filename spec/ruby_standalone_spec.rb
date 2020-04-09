@@ -77,12 +77,12 @@ class RubyStandaloneSpec
     failures.empty? ? 0 : 1
   end
 
-  def eq(a, b)
+  def assert_equal(a, b)
     raise FailedAssertion.new("expected #{a.inspect} == #{b.inspect}") unless a == b
     true
   end
 
-  def nm(a, b)
+  def assert_no_match(a, b)
     raise FailedAssertion.new("expected #{a.inspect} to not match #{b.inspect}") if a =~ b
     true
   end
@@ -90,7 +90,7 @@ class RubyStandaloneSpec
   USER = Etc.getpwuid.name
 
   it 'removes all vendor directories from $LOAD_PATH' do
-    nm $LOAD_PATH.join(':'), /vendor_rxuby/
+    assert_no_match $LOAD_PATH.join(':'), /vendor_rxuby/
   end
 
   if Etc.getpwuid.name == 'root'
@@ -103,16 +103,16 @@ class RubyStandaloneSpec
   else
     it 'installs to home directory' do
       path = Gem.default_dir
-      eq path, Etc.getpwuid.dir + "/.ruby-standalone/gems/ruby/#{RUBY_VERSION}"
+      assert_equal path, Etc.getpwuid.dir + "/.ruby-standalone/gems/ruby/#{RUBY_VERSION}"
     end
 
     it 'installs programs to home directory' do
-      eq Gem.default_bindir, Etc.getpwuid.dir + "/.ruby-standalone/gems/ruby/#{RUBY_VERSION}/bin"
+      assert_equal Gem.default_bindir, Etc.getpwuid.dir + "/.ruby-standalone/gems/ruby/#{RUBY_VERSION}/bin"
     end
   end
 
   it 'makes default gems available' do
-    eq Gem.default_specifications_dir, "/usr/lib/ruby/gems/#{RUBY_VERSION}/specifications/default"
+    assert_equal Gem.default_specifications_dir, "/usr/lib/ruby/gems/#{RUBY_VERSION}/specifications/default"
   end
 
   it 'sets a default path' do
@@ -123,7 +123,7 @@ class RubyStandaloneSpec
   end
 
   it 'sets path to ruby binary' do
-    nm Gem.ruby, %r{^/usr/bin}
+    assert_no_match Gem.ruby, %r{^/usr/bin}
   end
 
 end
