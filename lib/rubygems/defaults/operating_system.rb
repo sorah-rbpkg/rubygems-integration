@@ -68,11 +68,13 @@ elsif !ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
       api_version = RbConfig::CONFIG['ruby_version']
 
       upstream_default_path + [
+        "/usr/local/lib/ruby/gems/#{api_version}",
         "/usr/lib/ruby/gems/#{api_version}",
+        "/usr/lib/#{arch}/ruby/gems/#{api_version}",
         File.join('/usr/share/rubygems-integration', api_version),
         '/usr/share/rubygems-integration/all',
         "/usr/lib/#{arch}/rubygems-integration/#{api_version}"
-      ].compact
+      ]
     end
 
     alias :upstream_default_specifications_dir :default_specifications_dir
