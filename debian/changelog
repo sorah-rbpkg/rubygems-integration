@@ -1,3 +1,9 @@
+rubygems-integration (1.16nkmi1~dist) unstable; urgency=medium
+
+  * Follow debian upstream
+
+ -- Sorah Fukumori <her@sorah.jp>  Sat, 25 Apr 2020 15:47:17 +0000
+
 rubygems-integration (1.15nkmi1~dist) unstable; urgency=medium
 
   * Follow debian upstream
