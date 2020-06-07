@@ -24,6 +24,10 @@ if ENV['DEBIAN_RUBY_STANDALONE']
       Etc.getpwuid.uid == 0
     end
 
+    def __ruby_api_version__
+      @__ruby_api_version__ ||= RbConfig::CONFIG['ruby_version']
+    end
+
     alias upstream_default_bindir default_bindir
     def default_bindir
       __root__? && '/usr/local/bin' || File.join(Gem.user_dir, 'bin')
@@ -31,22 +35,22 @@ if ENV['DEBIAN_RUBY_STANDALONE']
 
     alias upstream_default_dir default_dir
     def default_dir
-      __root__? && "/var/lib/gems/#{RUBY_VERSION}" || user_dir
+      __root__? && "/var/lib/gems/#{__ruby_api_version__}" || user_dir
     end
 
     alias upstream_default_path default_path
     def default_path
-      [user_dir, "/var/lib/gems/#{RUBY_VERSION}", "/usr/lib/ruby/gems/#{RUBY_VERSION}"]
+      [user_dir, "/var/lib/gems/#{__ruby_api_version__}", "/usr/lib/ruby/gems/#{__ruby_api_version__}"]
     end
 
     alias upstream_default_specifications_dir default_specifications_dir
     def default_specifications_dir
-      "/usr/lib/ruby/gems/#{RUBY_VERSION}/specifications/default"
+      "/usr/lib/ruby/gems/#{__ruby_api_version__}/specifications/default"
     end
 
     alias upstream_user_dir user_dir
     def user_dir
-      File.join(Gem.user_home, '.ruby-standalone/gems', Gem.ruby_engine, RUBY_VERSION)
+      File.join(Gem.user_home, '.ruby-standalone/gems', Gem.ruby_engine, __ruby_api_version__)
     end
   end
 

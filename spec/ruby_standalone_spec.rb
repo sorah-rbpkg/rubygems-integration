@@ -87,6 +87,7 @@ class RubyStandaloneSpec
     true
   end
 
+  RUBY_API_VERSION = RbConfig::CONFIG["ruby_version"]
   USER = Etc.getpwuid.name
 
   it 'removes all vendor directories from $LOAD_PATH' do
@@ -95,7 +96,7 @@ class RubyStandaloneSpec
 
   if Etc.getpwuid.name == 'root'
     it 'installs to /var/lib/gems' do
-      Gem.default_dir == "/var/lib/gems/#{RUBY_VERSION}"
+      Gem.default_dir == "/var/lib/gems/#{RUBY_API_VERSION}"
     end
     it 'installs programs to system PATH' do
       Gem.default_bindir == "/usr/local/bin"
@@ -103,23 +104,23 @@ class RubyStandaloneSpec
   else
     it 'installs to home directory' do
       path = Gem.default_dir
-      assert_equal path, Etc.getpwuid.dir + "/.ruby-standalone/gems/ruby/#{RUBY_VERSION}"
+      assert_equal path, Etc.getpwuid.dir + "/.ruby-standalone/gems/ruby/#{RUBY_API_VERSION}"
     end
 
     it 'installs programs to home directory' do
-      assert_equal Gem.default_bindir, Etc.getpwuid.dir + "/.ruby-standalone/gems/ruby/#{RUBY_VERSION}/bin"
+      assert_equal Gem.default_bindir, Etc.getpwuid.dir + "/.ruby-standalone/gems/ruby/#{RUBY_API_VERSION}/bin"
     end
   end
 
   it 'makes default gems available' do
-    assert_equal Gem.default_specifications_dir, "/usr/lib/ruby/gems/#{RUBY_VERSION}/specifications/default"
+    assert_equal Gem.default_specifications_dir, "/usr/lib/ruby/gems/#{RUBY_API_VERSION}/specifications/default"
   end
 
   it 'sets a default path' do
     path = Gem.default_path
     path.include?(Gem.user_dir) &&
-      path.include?("/usr/lib/ruby/gems/#{RUBY_VERSION}") &&
-      path.include?("/var/lib/gems/#{RUBY_VERSION}")
+      path.include?("/usr/lib/ruby/gems/#{RUBY_API_VERSION}") &&
+      path.include?("/var/lib/gems/#{RUBY_API_VERSION}")
   end
 
   it 'sets path to ruby binary' do
