@@ -1,3 +1,25 @@
+rubygems-integration (1.17) unstable; urgency=medium
+
+  [ Antonio Terceiro ]
+  * Drop support for ruby < 2.7
+  * Make the integration with ca-certificates non-optional
+  * Makefile: run against system libraries under autopkgtest
+  * Provide a backend implementation for ruby-standalone
+  * Augment default gem search path
+    - Add /usr/local/lib/ruby/gems/${ruby_version}
+    - Add /usr/${arch}/lib/ruby/gems/${ruby_version}
+    My idea is to switch some defaults in the future, so that:
+    - locallly-installed gems are installed to /usr/local/...
+    - gem2deb installs arch:all packages to /usr/lib/...
+    - gem2deb installs arch:any packages to /usr/${arch}lib/...
+    Long-term, I would like to deprecate /usr/share/rubygems-integration/
+  * Drop incorrect usage of RUBY_VERSION
+
+  [ Josef Šimánek ]
+  * Patch rubyforge_project= only when available.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 08 Jun 2020 09:26:30 -0300
+
 rubygems-integration (1.16) unstable; urgency=medium
 
   * Avoid warnings about overridden methods on ruby2.7
