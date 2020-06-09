@@ -88,11 +88,8 @@ elsif !ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
   end
 
   class Gem::Specification
-    # rubyforge_project= was removed in RubyGems 3.1.4
-    if respond_to?(:rubyforge_project=)
-      alias :upstream_rubyforge_project= :rubyforge_project=
-      def rubyforge_project=(x)
-      end
+    alias :upstream_rubyforge_project= :rubyforge_project=
+    def rubyforge_project=(x)
     end
   end
 
