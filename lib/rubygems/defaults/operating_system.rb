@@ -100,12 +100,14 @@ elsif !ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
     end
   end
 
-  if RUBY_VERSION >= '2.7'
-    class Gem::Specification
+  class Gem::Specification
+    begin
       alias :upstream_rubyforge_project= :rubyforge_project=
       def rubyforge_project=(x)
       end
+    rescue NameError
+      # rubyforge_project= was removed in RubyGems 3.1.4
+      # If method rubyforge_project= is not present, that's ok
     end
   end
-
 end
