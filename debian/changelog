@@ -1,3 +1,9 @@
+rubygems-integration (1.17.1+fto10+1) buster-fasttrack; urgency=medium
+
+  * Rebuild for buster-fasttrack.
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 05 Jul 2020 00:29:17 +0530
+
 rubygems-integration (1.17.1) unstable; urgency=medium
 
   * Revert "Patch rubyforge_project= only when available."
