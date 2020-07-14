@@ -1,3 +1,10 @@
+rubygems-integration (1.17.2) unstable; urgency=medium
+
+  [ Josef Šimánek ]
+  * Redefine Gem::Specification::rubyforge_project= only if it exists
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 14 Jul 2020 17:03:54 -0300
+
 rubygems-integration (1.17.1) unstable; urgency=medium
 
   * Revert "Patch rubyforge_project= only when available."
