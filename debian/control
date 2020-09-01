@@ -1,7 +1,7 @@
 Source: rubygems-integration
 Section: ruby
 Priority: optional
-Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>,
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>,
             Sorah Fukumori <her@sorah.jp>
 # FIXME: debhelper-compat
 Build-Depends: debhelper (>= 11~),
