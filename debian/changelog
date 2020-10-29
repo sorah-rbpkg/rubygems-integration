@@ -1,3 +1,21 @@
+rubygems-integration (1.17.2nkmi1~dist) unstable; urgency=medium
+
+  * Follow debian upstream
+
+ -- Sorah Fukumori <her@sorah.jp>  Thu, 29 Oct 2020 02:21:23 +0000
+
+rubygems-integration (1.16nkmi1~dist) unstable; urgency=medium
+
+  * Follow debian upstream
+
+ -- Sorah Fukumori <her@sorah.jp>  Sat, 25 Apr 2020 15:47:17 +0000
+
+rubygems-integration (1.15nkmi1~dist) unstable; urgency=medium
+
+  * Follow debian upstream
+
+ -- Sorah Fukumori <her@sorah.jp>  Wed, 25 Dec 2019 12:48:54 +0000
+
 rubygems-integration (1.11nkmi1~dist) unstable; urgency=medium
 
   * Bump as the upstream updates

@@ -1,5 +1,20 @@
 Tests: package-list
-Depends: @, ruby, ruby-all-dev, ruby-ffi, ruby-magic
+Depends: ruby,
+         ruby-all-dev,
+         ruby-ffi,
+         ruby-magic,
+         @
 
-Test-Command: ruby spec/*_spec.rb
-Depends: @, ruby
+Test-Command: make spec
+Depends: @, ruby, ruby-all-dev
+Features: test-name=spec
+
+Test-Command: make spec
+Depends: @, ruby, ruby-all-dev
+Restrictions: needs-root
+Features: test-name=spec-as-root
+
+Test-Command: gem list --installed stringio
+Features: test-name=default-gems
+Depends: ruby,
+         @

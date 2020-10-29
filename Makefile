@@ -1,13 +1,20 @@
-RUBY = ruby
-SPECS = $(wildcard spec/*_spec.rb)
+RUBIES = $(shell ruby -rruby_debian_dev -e "puts RubyDebianDev::SUPPORTED_RUBY_VERSIONS.keys.join(' ')")
+SPEC_ON_ALL_RUBIES = $(patsubst %, spec-%, $(RUBIES))
+ifeq (,$(AUTOPKGTEST_TMP))
+	LIB := -Ilib
+endif
 
 all:
 	@echo Nothing to build!
 
-.PHONY: spec
+.PHONY: spec $(SPEC_ON_ALL_RUBIES)
 
-spec:
-	$(RUBY) -Ilib $(SPECS)
+spec: $(SPEC_ON_ALL_RUBIES)
+	@echo $(SPEC_ON_ALL_RUBIES)
+
+$(SPEC_ON_ALL_RUBIES): spec-%:
+	$* -w $(LIB) spec/rubygems_integration_spec.rb
+	DEBIAN_RUBY_STANDALONE=1 $* -w $(LIB) spec/ruby_standalone_spec.rb
 
 install:
 	install -m 755 -d $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults
@@ -15,8 +22,7 @@ install:
 
 uninstall:
 	$(RM) $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults/operating_system.rb
-	rmdir $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults || true
-	rmdir $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems || true
+	rmdir -p $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults
 
 clean:
 	@echo Nothing to clean
