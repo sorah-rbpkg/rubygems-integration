@@ -14,7 +14,6 @@ spec: $(SPEC_ON_ALL_RUBIES)
 
 $(SPEC_ON_ALL_RUBIES): spec-%:
 	$* -w $(LIB) spec/rubygems_integration_spec.rb
-	DEBIAN_RUBY_STANDALONE=1 $* -w $(LIB) spec/ruby_standalone_spec.rb
 
 install:
 	install -m 755 -d $(DESTDIR)/usr/lib/ruby/vendor_ruby/rubygems/defaults
