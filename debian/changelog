@@ -1,3 +1,14 @@
+rubygems-integration (1.17.3) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Update team name
+  * Add .gitattributes to keep unwanted files out of the source package
+
+  [ Antonio Terceiro ]
+  * Drop ruby-standalone tests
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 23 Nov 2020 17:00:06 -0300
+
 rubygems-integration (1.17.2) unstable; urgency=medium
 
   [ Josef Šimánek ]
