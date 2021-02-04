@@ -4,6 +4,15 @@ class << Gem
   }.freeze
 end
 
+if Gem.respond_to?(:disable_system_update_message=)
+  Gem.disable_system_update_message = <<EOF
+Your RubyGems was installed trough APT, and upgrading it through RubyGems
+itself is unsupported. If you really need the latest version of RubyGems (tip:
+you usually don't), then you need to install RubyGems (and Ruby) manually,
+maybe using tools like ruby-install, rvm, etc.
+EOF
+end
+
 if ENV['DEBIAN_RUBY_STANDALONE']
 
   $LOAD_PATH.reject! do |entry|
@@ -88,8 +97,13 @@ elsif !ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
   end
 
   class Gem::Specification
-    alias :upstream_rubyforge_project= :rubyforge_project=
-    def rubyforge_project=(x)
+    begin
+      alias :upstream_rubyforge_project= :rubyforge_project=
+      def rubyforge_project=(x)
+      end
+    rescue NameError
+      # rubyforge_project= was removed in RubyGems 3.1.4
+      # If method rubyforge_project= is not present, that's ok
     end
   end
 

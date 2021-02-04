@@ -1,3 +1,27 @@
+rubygems-integration (1.18) unstable; urgency=medium
+
+  * Disable `gem update --system`
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sat, 16 Jan 2021 12:46:57 -0300
+
+rubygems-integration (1.17.3) unstable; urgency=medium
+
+  [ Cédric Boutillier ]
+  * Update team name
+  * Add .gitattributes to keep unwanted files out of the source package
+
+  [ Antonio Terceiro ]
+  * Drop ruby-standalone tests
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 23 Nov 2020 17:00:06 -0300
+
+rubygems-integration (1.17.2) unstable; urgency=medium
+
+  [ Josef Šimánek ]
+  * Redefine Gem::Specification::rubyforge_project= only if it exists
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 14 Jul 2020 17:03:54 -0300
+
 rubygems-integration (1.17.1+fto10+1) buster-fasttrack; urgency=medium
 
   * Rebuild for buster-fasttrack.
