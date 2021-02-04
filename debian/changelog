@@ -1,3 +1,9 @@
+rubygems-integration (1.18~fto10+1) buster-fasttrack; urgency=medium
+
+  * Rebuild for buster-fasttrack.
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 05 Feb 2021 00:01:14 +0530
+
 rubygems-integration (1.18) unstable; urgency=medium
 
   * Disable `gem update --system`
