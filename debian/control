@@ -1,11 +1,10 @@
 Source: rubygems-integration
 Section: ruby
 Priority: optional
-Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>,
-            Sorah Fukumori <her@sorah.jp>
+Maintainer: Sorah Fukumori <her@sorah.jp>
 # FIXME: debhelper-compat
-Build-Depends: debhelper (>= 11~),
-Standards-Version: 4.4.1
+Build-Depends: debhelper-compat (= 12),
+Standards-Version: 4.5.1
 Vcs-Git: https://github.com/sorah-rbpkg/rubygems-integration.git
 Vcs-Browser: https://github.com/sorah-rbpkg/rubygems-integration
 Rules-Requires-Root: no
