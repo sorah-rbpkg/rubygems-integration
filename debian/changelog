@@ -1,3 +1,9 @@
+rubygems-integration (1.18nkmi1~dist) unstable; urgency=medium
+
+  * Merge debian changes
+
+ -- Sorah Fukumori <her@sorah.jp>  Mon, 04 Oct 2021 12:01:12 +0900
+
 rubygems-integration (1.17.2nkmi1~dist) unstable; urgency=medium
 
   * Follow debian upstream
