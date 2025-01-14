@@ -1,4 +1,6 @@
-rubygems-integration (1.19) UNRELEASED; urgency=medium
+rubygems-integration (1.19) unstable; urgency=medium
+
+  * Team upload.
 
   [ Chris Hofstaedtler ]
   * Remove myself from Uploaders
