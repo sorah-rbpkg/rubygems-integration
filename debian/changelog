@@ -1,3 +1,19 @@
+rubygems-integration (1.19) UNRELEASED; urgency=medium
+
+  [ Chris Hofstaedtler ]
+  * Remove myself from Uploaders
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
+  * Update standards version to 4.6.1, no changes needed.
+
+  [ Lucas Kanashiro ]
+  * Comply with newer Minitest syntax
+  * Declare compliance with Debian Policy 4.7.0
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Mon, 13 Jan 2025 23:01:08 -0300
+
 rubygems-integration (1.18) unstable; urgency=medium
 
   * Disable `gem update --system`
