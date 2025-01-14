@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 
-class RubygemsIntegrationSpec < MiniTest::Spec
+class RubygemsIntegrationSpec < Minitest::Spec
   ARCH = RbConfig::CONFIG['arch']
   RUBY_API_VERSION = RbConfig::CONFIG['ruby_version']
 
