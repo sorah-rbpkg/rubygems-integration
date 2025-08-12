@@ -1,3 +1,9 @@
+rubygems-integration (1.19nkmi1~dist) unstable; urgency=medium
+
+  * Merge debian changes for trixie
+
+ -- Sorah Fukumori <her@sorah.jp>  Tue, 12 Aug 2025 17:14:06 +0900
+
 rubygems-integration (1.18nkmi1~dist) unstable; urgency=medium
 
   * Merge debian changes
