@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: rubygems-integration
-Source: http://git.debian.org/?p=pkg-ruby-extras/rubygems-integration.git;a=summary
+Source: https://salsa.debian.org/ruby-team/rubygems-integration
 
 Files: *
 Copyright: 2012-2019 Antonio Terceiro <terceiro@debian.org>
