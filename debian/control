@@ -1,13 +1,11 @@
 Source: rubygems-integration
 Section: ruby
-Priority: optional
 Maintainer: Sorah Fukumori <her@sorah.jp>
 # FIXME: debhelper-compat
 Build-Depends: debhelper-compat (= 12),
-Standards-Version: 4.7.0
+Standards-Version: 4.7.4
 Vcs-Git: https://github.com/sorah-rbpkg/rubygems-integration.git
 Vcs-Browser: https://github.com/sorah-rbpkg/rubygems-integration
-Rules-Requires-Root: no
 
 Package: rubygems-integration
 Architecture: all
