@@ -1,9 +1,15 @@
 # frozen_string_literal: true
 
 class << Gem
-  OPERATING_SYSTEM_DEFAULTS = {
-    ssl_ca_cert: '/etc/ssl/certs/ca-certificates.crt'
-  }.freeze
+  # Override the packager hook so Gem::ConfigFile picks this up when it is
+  # first loaded (OPERATING_SYSTEM_DEFAULTS = Gem.operating_system_defaults).
+  # A bare constant on Gem's singleton class is never read by RubyGems.
+  alias upstream_operating_system_defaults operating_system_defaults
+  def operating_system_defaults
+    {
+      ssl_ca_cert: '/etc/ssl/certs/ca-certificates.crt'
+    }.freeze
+  end
 end
 
 if Gem.respond_to?(:disable_system_update_message=)
