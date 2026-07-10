@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
 class << Gem
-  # Override the packager hook so Gem::ConfigFile picks this up when it is
-  # first loaded (OPERATING_SYSTEM_DEFAULTS = Gem.operating_system_defaults).
+  # Packager hook consumed by Gem::ConfigFile when it is first loaded:
+  #   OPERATING_SYSTEM_DEFAULTS = Gem.operating_system_defaults
   # A bare constant on Gem's singleton class is never read by RubyGems.
+  #
+  # RubyGems 4.0 ships fewer bundled TLS roots (only GlobalSign.pem under
+  # ssl_certs/); pointing at ca-certificates keeps gem HTTPS working with the
+  # system trust store on Debian/Ubuntu.
   alias upstream_operating_system_defaults operating_system_defaults
   def operating_system_defaults
     {
@@ -115,14 +119,9 @@ elsif !ENV['DEBIAN_DISABLE_RUBYGEMS_INTEGRATION']
     end
   end
 
-  class Gem::Specification
-    begin
-      alias :upstream_rubyforge_project= :rubyforge_project=
-      def rubyforge_project=(x)
-      end
-    rescue NameError
-      # rubyforge_project= was removed in RubyGems 3.1.4
-      # If method rubyforge_project= is not present, that's ok
-    end
-  end
+  # Gem::Specification#rubyforge_project= was removed in RubyGems 3.1.4.
+  # Modern RubyGems (including 3.6.x and 4.0.x) ignore it via REMOVED_METHODS
+  # + method_missing when old gemspecs under rubygems-integration set it.
+  # No Debian override is required.
+
 end
