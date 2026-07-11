@@ -192,11 +192,24 @@ class RubygemsIntegrationSpec < Minitest::Spec
   end
 
   it 'loads ConfigFile OPERATING_SYSTEM_DEFAULTS from Gem.operating_system_defaults' do
-    # ConfigFile freezes the packager hash at require time. Regression guard for
-    # the old singleton-class constant that never reached ConfigFile.
+    # ConfigFile assigns OPERATING_SYSTEM_DEFAULTS = Gem.operating_system_defaults
+    # at require time. Regression guard for the old singleton-class constant that
+    # never reached ConfigFile.
     _(Gem::ConfigFile::OPERATING_SYSTEM_DEFAULTS[:ssl_ca_cert] ||
       Gem::ConfigFile::OPERATING_SYSTEM_DEFAULTS['ssl_ca_cert'])
       .must_equal '/etc/ssl/certs/ca-certificates.crt'
+  end
+
+  it 'returns a mutable Hash from operating_system_defaults' do
+    # RubyGems TestGemConfigFile does OPERATING_SYSTEM_DEFAULTS.clear / []= in
+    # setup; a frozen Hash causes FrozenError and fails the rubygems autopkgtest.
+    defaults = Gem.operating_system_defaults
+    _(defaults).must_be_instance_of Hash
+    _(defaults.frozen?).must_equal false
+    defaults_dup = defaults.dup
+    defaults_dup.clear
+    defaults_dup[:probe] = true
+    _(defaults_dup[:probe]).must_equal true
   end
 
   it 'ignores rubyforge_project= on specifications like modern RubyGems does' do

@@ -12,7 +12,7 @@ class << Gem
   def operating_system_defaults
     {
       ssl_ca_cert: '/etc/ssl/certs/ca-certificates.crt'
-    }.freeze
+    }
   end
 end
 
