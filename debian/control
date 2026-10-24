@@ -1,14 +1,14 @@
 Source: rubygems-integration
 Section: ruby
 Maintainer: Sorah Fukumori <her@sorah.jp>
-Build-Depends: debhelper-compat (= 14)
+Build-Depends: debhelper-compat (= 13)
 Standards-Version: 4.7.4
 Vcs-Git: https://github.com/sorah-rbpkg/rubygems-integration.git
 Vcs-Browser: https://github.com/sorah-rbpkg/rubygems-integration
 
 Package: rubygems-integration
 Architecture: all
-Depends: ca-certificates
+Depends: ca-certificates, ${misc:Depends}
 Suggests: bundler
 Multi-Arch: foreign
 Description: integration of Debian Ruby packages with Rubygems
